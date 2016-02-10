@@ -1,0 +1,446 @@
+[03-Jan-2016 14:58:03] PHP Warning:  file_get_contents(/.conf/.server) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Config/Environment.php on line 15
+[03-Jan-2016 14:58:03] PHP Warning:  file_get_contents(/.conf/config..json) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Config/Environment.php on line 16
+[03-Jan-2016 14:58:03] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Config/Environment.php on line 19
+[03-Jan-2016 14:58:03] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Config/Environment.php on line 19
+[03-Jan-2016 14:58:03] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Config/Environment.php on line 19
+[03-Jan-2016 14:58:03] PHP Fatal error:  Template not found: "www/layout."" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/HtmlResponse.php on line 52
+[03-Jan-2016 15:11:43] PHP Warning:  file_get_contents(/htdocs/phlex6_v2//.conf/.server) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Config/Environment.php on line 15
+[03-Jan-2016 15:11:43] PHP Warning:  file_get_contents(/htdocs/phlex6_v2//.conf/config..json) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Config/Environment.php on line 16
+[03-Jan-2016 15:11:43] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Config/Environment.php on line 19
+[03-Jan-2016 15:11:43] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Config/Environment.php on line 19
+[03-Jan-2016 15:11:43] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Config/Environment.php on line 19
+[03-Jan-2016 15:11:43] PHP Fatal error:  Template not found: "www/layout."" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/HtmlResponse.php on line 52
+[11-Jan-2016 20:12:44] PHP Fatal error:  Class 'App\www\HtmlResponse' not found in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 25
+[11-Jan-2016 20:15:13] PHP Fatal error:  Class 'App\www\HtmlResponse' not found in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 25
+[11-Jan-2016 20:15:31] PHP Fatal error:  Class 'App\www\HtmlResponse' not found in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 25
+[11-Jan-2016 20:17:23] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 25
+[11-Jan-2016 20:17:23] PHP Fatal error:  Template not found: "/htdocs/phlex6_v2/.templates/www.article.phtml"" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/HtmlResponse.php on line 52
+[11-Jan-2016 20:18:07] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 25
+[11-Jan-2016 20:18:07] PHP Fatal error:  Template not found: "/htdocs/phlex6_v2/.templates/www.article.phtml"" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/HtmlResponse.php on line 52
+[11-Jan-2016 20:18:11] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 25
+[11-Jan-2016 20:18:11] PHP Fatal error:  Response view data not set: "title" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 20:48:16] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 25
+[11-Jan-2016 20:48:16] PHP Fatal error:  Response view data not set: "title" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 20:48:19] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 25
+[11-Jan-2016 20:48:19] PHP Fatal error:  Response view data not set: "title" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 20:48:20] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 25
+[11-Jan-2016 20:48:20] PHP Fatal error:  Response view data not set: "title" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 20:48:38] PHP Fatal error:  Response view data not set: "body" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 20:48:41] PHP Fatal error:  Response view data not set: "body" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 20:51:14] PHP Fatal error:  Response view data not set: "body" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 20:51:17] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 27
+[11-Jan-2016 20:51:17] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 27
+[11-Jan-2016 20:51:17] PHP Fatal error:  Response view data not set: "other" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 20:52:21] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 30
+[11-Jan-2016 20:52:21] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 30
+[11-Jan-2016 20:52:21] PHP Fatal error:  Response view data not set: "other" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 20:52:22] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 30
+[11-Jan-2016 20:52:22] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 30
+[11-Jan-2016 20:52:22] PHP Fatal error:  Response view data not set: "other" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 20:52:41] PHP Parse error:  syntax error, unexpected T_NS_SEPARATOR, expecting T_STRING in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 30
+[11-Jan-2016 20:52:59] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 30
+[11-Jan-2016 20:52:59] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 30
+[11-Jan-2016 20:52:59] PHP Fatal error:  Response view data not set: "other" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 20:53:41] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 31
+[11-Jan-2016 20:53:41] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 31
+[11-Jan-2016 20:53:41] PHP Fatal error:  Response view data not set: "other" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 20:53:42] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 31
+[11-Jan-2016 20:53:42] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 31
+[11-Jan-2016 20:53:42] PHP Fatal error:  Response view data not set: "other" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 20:53:54] PHP Fatal error:  Class 'ArticleController' not found in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 31
+[11-Jan-2016 20:53:55] PHP Fatal error:  Class 'ArticleController' not found in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 31
+[11-Jan-2016 20:53:56] PHP Fatal error:  Class 'ArticleController' not found in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 31
+[11-Jan-2016 20:54:11] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 31
+[11-Jan-2016 20:54:11] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 31
+[11-Jan-2016 20:54:11] PHP Fatal error:  Response view data not set: "other" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 20:54:12] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 31
+[11-Jan-2016 20:54:12] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 31
+[11-Jan-2016 20:54:12] PHP Fatal error:  Response view data not set: "other" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 20:54:13] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 31
+[11-Jan-2016 20:54:13] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 31
+[11-Jan-2016 20:54:13] PHP Fatal error:  Response view data not set: "other" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 20:56:12] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 26
+[11-Jan-2016 20:56:12] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 26
+[11-Jan-2016 20:56:12] PHP Fatal error:  Template not found: "/htdocs/phlex6_v2/.templates/.phtml"" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/HtmlResponse.php on line 52
+[11-Jan-2016 20:56:16] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 26
+[11-Jan-2016 20:56:16] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 26
+[11-Jan-2016 20:56:16] PHP Fatal error:  Template not found: "/htdocs/phlex6_v2/.templates/.phtml"" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/HtmlResponse.php on line 52
+[11-Jan-2016 20:56:17] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 26
+[11-Jan-2016 20:56:17] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 26
+[11-Jan-2016 20:56:17] PHP Fatal error:  Template not found: "/htdocs/phlex6_v2/.templates/.phtml"" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/HtmlResponse.php on line 52
+[11-Jan-2016 20:57:18] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 26
+[11-Jan-2016 20:57:18] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 26
+[11-Jan-2016 20:57:20] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 26
+[11-Jan-2016 20:57:20] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 26
+[11-Jan-2016 20:57:22] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 26
+[11-Jan-2016 20:57:22] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 26
+[11-Jan-2016 20:57:23] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 26
+[11-Jan-2016 20:57:23] PHP Notice:  Undefined variable: article in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 26
+[11-Jan-2016 21:01:42] PHP Fatal error:  Response view data not set: "var" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 22:53:54] PHP Parse error:  syntax error, unexpected ')' in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 30
+[11-Jan-2016 22:53:59] PHP Parse error:  syntax error, unexpected '(' in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 30
+[11-Jan-2016 22:54:14] PHP Parse error:  syntax error, unexpected '(' in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 30
+[11-Jan-2016 22:54:16] PHP Parse error:  syntax error, unexpected '(' in /Users/elvis/Documents/Sites/phlex6_v2/.templates/www/layout.phtml on line 30
+[11-Jan-2016 22:58:46] PHP Fatal error:  Response view data not set: "boeld" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 23:00:20] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 23:00:22] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[11-Jan-2016 23:05:29] PHP Notice:  Response view data not set: "someSeto" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/Response.php on line 30
+[12-Jan-2016 13:05:14] PHP Notice:  Undefined property: Phlex\Kraft\Response\DoubleHtmlResponse::$template in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/DoubleHtmlResponse.php on line 17
+[12-Jan-2016 13:05:14] PHP Notice:  Undefined property: Phlex\Kraft\Response\DoubleHtmlResponse::$template in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/DoubleHtmlResponse.php on line 23
+[12-Jan-2016 13:06:06] PHP Fatal error:  Template not found: "/htdocs/phlex6_v2/.templates/www/box-begin.phtml"" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/HtmlResponse.php on line 50
+[27-Jan-2016 23:14:30] PHP Fatal error:  Template not found: "/htdocs/phlex6_v2/.templates/www/box-begin.phtml"" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/HtmlResponse.php on line 50
+[27-Jan-2016 23:22:36] PHP Fatal error:  Template not found: "/htdocs/phlex6_v2/.templates/www/box-begin.phtml"" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/HtmlResponse.php on line 50
+[27-Jan-2016 23:22:36] PHP Fatal error:  Template not found: "/htdocs/phlex6_v2/.templates/www/box-begin.phtml"" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/HtmlResponse.php on line 50
+[28-Jan-2016 18:56:02] PHP Fatal error:  Template not found: "/htdocs/phlex6_v2/.templates/www/box-begin.phtml"" in /Users/elvis/Documents/Sites/phlex6_v2/modules/Phlex/Kraft/Response/HtmlResponse.php on line 50
+[08-Feb-2016 19:25:11] PHP Fatal error:  Class 'CustomTag\www\Comment' not found in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[08-Feb-2016 19:26:05] PHP Fatal error:  Class 'CustomTag\www\Comment' not found in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[08-Feb-2016 19:26:07] PHP Fatal error:  Class 'CustomTag\www\Comment' not found in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[08-Feb-2016 19:26:43] PHP Fatal error:  Class 'CustomTag\www\Comment' not found in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[08-Feb-2016 19:26:45] PHP Fatal error:  Class 'CustomTag\www\Comment' not found in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[08-Feb-2016 19:26:47] PHP Fatal error:  Class 'CustomTag\www\Comment' not found in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[08-Feb-2016 19:26:58] PHP Fatal error:  Class 'CustomTag\www\Comment' not found in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[08-Feb-2016 19:27:00] PHP Fatal error:  Class 'CustomTag\www\Comment' not found in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[08-Feb-2016 19:28:02] PHP Fatal error:  Class 'CustomTag\www\Comment' not found in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[08-Feb-2016 19:28:04] PHP Fatal error:  Class 'CustomTag\www\Comment' not found in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[08-Feb-2016 19:28:04] PHP Fatal error:  Class 'CustomTag\www\Comment' not found in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[08-Feb-2016 19:28:05] PHP Fatal error:  Class 'CustomTag\www\Comment' not found in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[08-Feb-2016 19:28:05] PHP Fatal error:  Class 'CustomTag\www\Comment' not found in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[08-Feb-2016 19:29:10] PHP Fatal error:  Class 'CustomTag\www\Comment' not found in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[08-Feb-2016 19:29:30] PHP Fatal error:  Class 'PxString' not found in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[08-Feb-2016 19:29:32] PHP Fatal error:  Class 'PxString' not found in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[08-Feb-2016 19:29:46] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:29:46] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:29:46] PHP Fatal error:  Cannot access  property CustomTag\www\Box::$stack in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/CustomTag.php on line 24
+[08-Feb-2016 19:30:28] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:30:28] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:30:28] PHP Fatal error:  Template not found: "/htdocs/PhlexDev/.templates/.phtml"" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 50
+[08-Feb-2016 19:31:42] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:31:42] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:31:42] PHP Fatal error:  Template not found: "/htdocs/PhlexDev/.templates/.phtml"" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 50
+[08-Feb-2016 19:33:15] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:33:15] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:33:15] PHP Fatal error:  Template not found: "/htdocs/PhlexDev/.templates/.phtml"" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 50
+[08-Feb-2016 19:33:17] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:33:17] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:33:17] PHP Fatal error:  Template not found: "/htdocs/PhlexDev/.templates/.phtml"" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 50
+[08-Feb-2016 19:33:19] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:33:19] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:33:19] PHP Fatal error:  Template not found: "/htdocs/PhlexDev/.templates/.phtml"" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 50
+[08-Feb-2016 19:33:27] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:33:27] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:33:27] PHP Fatal error:  Template not found: "/htdocs/PhlexDev/.templates/.phtml"" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 50
+[08-Feb-2016 19:33:29] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:33:29] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:33:29] PHP Fatal error:  Template not found: "/htdocs/PhlexDev/.templates/.phtml"" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 50
+[08-Feb-2016 19:33:30] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:33:30] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:33:30] PHP Fatal error:  Template not found: "/htdocs/PhlexDev/.templates/.phtml"" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 50
+[08-Feb-2016 19:33:31] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:33:31] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:33:31] PHP Fatal error:  Template not found: "/htdocs/PhlexDev/.templates/.phtml"" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 50
+[08-Feb-2016 19:34:02] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:34:02] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:34:02] PHP Fatal error:  Template not found: "/htdocs/PhlexDev/.templates/.phtml"" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 50
+[08-Feb-2016 19:35:26] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:35:26] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:35:26] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 29
+[08-Feb-2016 19:35:26] PHP Notice:  Response view data not set: "title" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:36:51] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:36:51] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:36:51] PHP Notice:  Response view data not set: "title" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:36:53] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:36:53] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:36:53] PHP Notice:  Response view data not set: "title" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:37:12] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:37:12] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:37:49] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:37:49] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:37:51] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:37:51] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:37:52] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:37:52] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:37:54] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:37:54] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:38:09] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:38:09] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:44:38] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:44:38] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:57:05] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:57:05] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:57:14] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:57:14] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 19:57:14] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 31
+[08-Feb-2016 19:57:14] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:00:50] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:00:50] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:00:52] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:00:52] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:01:49] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:01:49] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:02:20] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:02:20] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:02:21] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:02:21] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:02:42] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:02:42] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:02:53] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:02:53] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:03:07] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:03:07] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:03:46] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:03:46] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:03:59] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:03:59] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:04:16] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:04:16] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:04:42] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:04:42] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:04:48] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:04:48] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:05:42] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:05:42] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:05:58] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:05:58] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:06:14] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:06:14] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:06:19] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:06:19] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:07:00] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:07:00] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:07:07] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:07:07] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:07:15] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:07:15] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:08:45] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:08:45] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:08:47] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:08:47] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:08:55] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:08:55] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:09:15] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:09:15] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:09:25] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:09:25] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:09:27] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:09:27] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:10:06] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:10:06] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:10:39] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:10:39] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:10:54] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:10:54] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:11:53] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:11:53] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:15:52] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:15:52] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:15:52] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:15:52] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:15:52] PHP Notice:  Response view data not set: "title" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:15:52] PHP Notice:  Response view data not set: "title" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:18:57] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:18:57] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:18:57] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:18:57] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:18:57] PHP Notice:  Response view data not set: "title" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:18:57] PHP Notice:  Response view data not set: "title" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:19:07] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:19:07] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:19:07] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:19:07] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:19:07] PHP Notice:  Response view data not set: "title" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:19:07] PHP Notice:  Response view data not set: "title" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:19:07] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:19:07] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:19:07] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:19:07] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:19:07] PHP Notice:  Response view data not set: "title" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:19:07] PHP Notice:  Response view data not set: "title" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:19:24] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:19:24] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:19:24] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:19:24] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:19:24] PHP Notice:  Response view data not set: "title" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:20:29] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:20:29] PHP Notice:  Response view data not set: "item" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:20:29] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 31
+[08-Feb-2016 20:20:29] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:22:23] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[08-Feb-2016 20:22:23] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:22:25] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[08-Feb-2016 20:22:25] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:22:27] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[08-Feb-2016 20:22:27] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:22:54] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[08-Feb-2016 20:22:54] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:23:18] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[08-Feb-2016 20:23:18] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:39:10] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[08-Feb-2016 20:39:10] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:39:11] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[08-Feb-2016 20:39:11] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:39:54] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[08-Feb-2016 20:39:54] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:41:42] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[08-Feb-2016 20:41:42] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:42:08] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[08-Feb-2016 20:42:08] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:42:14] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[08-Feb-2016 20:42:14] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 20:50:03] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[08-Feb-2016 20:50:03] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 21:33:35] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[08-Feb-2016 21:33:35] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 21:33:36] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[08-Feb-2016 21:33:36] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 22:01:41] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 27
+[08-Feb-2016 22:01:41] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 22:04:30] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 28
+[08-Feb-2016 22:04:30] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 22:08:14] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 30
+[08-Feb-2016 22:08:14] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[08-Feb-2016 22:08:16] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 30
+[08-Feb-2016 22:08:16] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[09-Feb-2016 05:32:12] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 30
+[09-Feb-2016 05:32:12] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[09-Feb-2016 06:03:05] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 31
+[09-Feb-2016 06:03:05] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[10-Feb-2016 21:33:41] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 31
+[10-Feb-2016 21:33:41] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[10-Feb-2016 22:20:01] PHP Parse error:  syntax error, unexpected ')' in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 43
+[10-Feb-2016 22:20:45] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 31
+[10-Feb-2016 22:20:45] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[10-Feb-2016 22:26:08] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 10
+[10-Feb-2016 22:26:58] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 31
+[10-Feb-2016 22:26:58] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:28:55] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 32
+[10-Feb-2016 22:28:55] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:29:54] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 32
+[10-Feb-2016 22:29:54] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:30:00] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:30:00] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:31:04] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[10-Feb-2016 22:31:04] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:38:09] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:38:09] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:40:03] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:40:03] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:40:06] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:40:06] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:40:09] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:40:09] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:40:43] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:40:43] PHP Fatal error:  Call to undefined method Phlex\Kraft\Response\HtmlResponse::addJSInclude() in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/comments.phtml on line 1
+[10-Feb-2016 22:40:45] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:40:45] PHP Fatal error:  Call to undefined method Phlex\Kraft\Response\HtmlResponse::addJSInclude() in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/comments.phtml on line 1
+[10-Feb-2016 22:41:32] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:41:32] PHP Fatal error:  Call to undefined method Phlex\Kraft\Response\HtmlResponse::addJSInclude() in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/comments.phtml on line 1
+[10-Feb-2016 22:43:00] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:43:00] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:43:07] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:43:07] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:43:08] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:43:08] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:43:29] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:43:29] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:43:31] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:43:31] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:44:13] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 22
+[10-Feb-2016 22:44:13] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:44:20] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 21
+[10-Feb-2016 22:44:20] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:44:22] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 21
+[10-Feb-2016 22:44:22] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:44:36] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 20
+[10-Feb-2016 22:44:36] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:45:04] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:45:04] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:45:06] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:45:06] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:45:42] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 27
+[10-Feb-2016 22:45:42] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:46:25] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 27
+[10-Feb-2016 22:46:25] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:46:26] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 27
+[10-Feb-2016 22:46:26] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:47:00] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 27
+[10-Feb-2016 22:47:00] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:47:28] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 27
+[10-Feb-2016 22:47:28] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:47:42] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 27
+[10-Feb-2016 22:47:42] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[10-Feb-2016 22:48:59] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:48:59] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[10-Feb-2016 22:49:28] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:49:28] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[10-Feb-2016 22:49:41] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:49:41] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[10-Feb-2016 22:50:14] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:50:14] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 16
+[10-Feb-2016 22:56:08] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:56:08] PHP Warning:  Missing argument 2 for Phlex\Kraft\CustomTag::factory(), called in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25 and defined in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/CustomTag.php on line 26
+[10-Feb-2016 22:56:08] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 17
+[10-Feb-2016 22:58:27] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 22:58:27] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[10-Feb-2016 23:04:50] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:04:50] PHP Fatal error:  Call to a member function getRoot() on a non-object in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/HtmlResponse.php on line 20
+[10-Feb-2016 23:05:19] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:05:19] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[10-Feb-2016 23:07:56] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:07:56] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[10-Feb-2016 23:10:20] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:10:20] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 30
+[10-Feb-2016 23:14:06] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:14:06] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:18:54] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:18:54] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:18:57] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:18:57] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:21:11] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:21:11] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:23:47] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:23:47] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:24:11] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:24:11] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:24:46] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:24:46] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:24:54] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:24:54] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:24:55] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:24:55] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:26:05] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:26:05] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:26:10] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:26:10] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:27:22] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[10-Feb-2016 23:27:22] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:27:27] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[10-Feb-2016 23:27:27] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:27:53] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[10-Feb-2016 23:27:53] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:27:57] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[10-Feb-2016 23:27:57] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:28:42] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[10-Feb-2016 23:28:42] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:29:54] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[10-Feb-2016 23:29:54] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:29:55] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 24
+[10-Feb-2016 23:29:55] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:30:43] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 23
+[10-Feb-2016 23:30:43] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:32:40] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 23
+[10-Feb-2016 23:32:40] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:33:12] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:33:12] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:37:33] PHP Parse error:  syntax error, unexpected T_VARIABLE in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/PageResponse.php on line 49
+[10-Feb-2016 23:37:45] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:37:45] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:38:13] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:38:13] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:39:24] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:39:24] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:39:51] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:39:51] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:41:16] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:41:16] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32
+[10-Feb-2016 23:42:08] PHP Notice:  Undefined variable: item in /Users/elvis/Documents/Sites/PhlexDev/.templates/www/layout.phtml on line 25
+[10-Feb-2016 23:42:08] PHP Notice:  Response view data not set: "bold" in /Users/elvis/Documents/Sites/PhlexDev/modules/Phlex/Kraft/Response/Response.php on line 32

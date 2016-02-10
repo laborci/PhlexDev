@@ -1,0 +1,47 @@
+@ctns: CustomTag
+
+@style: /css/style.main.css
+@script: /js/index.js
+@script: /js/other.js
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Phlex6</title>
+	<meta charset="utf-8">
+	@import-css
+	@servervars
+	@import-js
+</head>
+<body>
+
+	<h1>{.pageTitle}</h1>
+	{.content}
+
+	<br>article: {.content.title}<br><br>
+
+	{each .someSet as $value at $key}
+	{.}
+
+	{each .someSet}
+		<div style="border:2px solid red">
+		{as $value at $key}
+		{.}
+		</div>
+	{.}
+
+	<ct:.CustomTag.www.Comment item="$item" attr="2" />
+
+	<ct:www.Box title="Ez itten a cím" attr="3">
+		asdf
+	</ct:www.Box>
+
+	<div>
+
+
+	</div>
+
+	<br><br>{.footer}
+
+</body>
+</html>

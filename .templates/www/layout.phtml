@@ -1,0 +1,33 @@
+<?php \Phlex\Kraft\Response\PageResponse::addCSSInclude("/css/style.main.css"); ?>
+<?php \Phlex\Kraft\Response\PageResponse::addJSInclude("/js/index.js"); ?>
+<?php \Phlex\Kraft\Response\PageResponse::addJSInclude("/js/other.js"); ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Phlex6</title>
+	<meta charset="utf-8">
+	@import-css
+	@servervars
+	@import-js
+</head>
+<body>
+	<h1><?php echo $this['pageTitle'];?></h1>
+	<?php echo $this['content'];?>
+	<br>article: <?php echo $this['content']['title'];?><br><br>
+	<?php if(is_array($this['someSet']) and count($this['someSet'])) foreach($this['someSet'] as $key=>$value){ ?> 
+	<?php } ?>
+	<?php if(is_array($this['someSet']) and count($this['someSet'])) { ?> 
+		<div style="border:2px solid red">
+		<?php  foreach($this['someSet'] as $key=>$value){ ?> 
+		<?php } ?>
+		</div>
+	<?php } ?>
+	<?php \CustomTag\www\Comment::factory(array("item" => $item, "attr" => "2"), $this)->renderTag(); ?>
+	<?php CustomTag\www\Box::factory(array("title" => "Ez itten a cím", "attr" => "3"), $this)->renderTag(); ?>
+		asdf
+	<?php Phlex\Kraft\CustomTag::pullFromStack()->renderCloseTag(); ?>
+	<div>
+	</div>
+	<br><br><?php echo $this['footer'];?>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+	"app": "PhlexDev",
+	"dev-mode": true,
+	"domain": "phlex6.dev",
+	"root": "/htdocs/{{app}}/",
+	"databases": {
+		"app": "@db:root:bla@localhost/{{app}}"
+	}
+}

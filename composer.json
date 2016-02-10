@@ -1,0 +1,12 @@
+{
+    "name": "elvis/phlex6_v2",
+    "authors": [
+        {
+            "name": "Gergely Laborci",
+            "email": "gergely@laborci.hu"
+        }
+    ],
+    "require": {
+        "symfony/console": "^3.0"
+    }
+}

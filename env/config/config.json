@@ -1,0 +1,15 @@
+{
+	"app": null,
+	"dev-mode": false,
+	"memcache": false,
+
+	"domain": null,
+	"domain-aliases": ["*.{{domain}}"],
+	"root": null,
+
+	"databases": {
+		"app": null
+	},
+
+	"@kraft": "kraft.do.not.modify.json"
+}

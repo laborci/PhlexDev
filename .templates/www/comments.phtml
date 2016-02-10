@@ -1,0 +1,6 @@
+<?php \Phlex\Kraft\Response\PageResponse::addJSInclude("/js/c.js"); ?>
+<div>
+	<?php if( $this['bold'] ) {?> <b><?php } ?>
+	kommentek <?php echo $this['item'];?>
+	<?php if( isset($this['bold']) ) {?> </b><?php } ?>
+</div>
