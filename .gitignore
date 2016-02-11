@@ -1,0 +1,6 @@
+.templates/**/*
+.log/**/*
+.conf/**/*
+vendor/**/*
+node_modules/**/*
+.data/**/*

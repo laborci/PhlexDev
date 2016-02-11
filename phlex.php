@@ -31,7 +31,7 @@ class ConfigCommand extends Command {
 
 
 	protected function execute(InputInterface $input, OutputInterface $output) {
-		$builder = new \Phlex\Config\ConfigBuilder(__DIR__.'/env/config/', __DIR__.'/.conf/', $output);
+		$builder = new \Phlex\Env\ConfigBuilder(__DIR__.'/env/config/', __DIR__.'/.conf/', $output);
 		$server = $input->getArgument('server');
 		$builder->build($server);
 		$output->writeln('Done...');

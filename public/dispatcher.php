@@ -6,7 +6,7 @@ ob_start();
 require_once '../modules/autoload.php';
 require_once '../application/autoload.php';
 
-$env = \Phlex\Config\Environment::instance();
+$env = \Phlex\Env\Environment::instance();
 
 if($env['dev-mode']){
 	// system('php '.$env['root'].'phlex.php config -q');

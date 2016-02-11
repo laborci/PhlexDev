@@ -18,21 +18,21 @@ class DirectiveParser {
 		foreach($lines as $idx=>$line){
 			$line = trim($line);
 			if(false and $line == "@import-scripts"){
-				$lines[$idx] = '<?php \Phlex\Kraft\Response\PageResponse::importJS(); ?>';
+				$lines[$idx] = '<?php \Phlex\Kraft\Response\PageView::importJS(); ?>';
 			}elseif(false and $line == "@import-styles"){
-				$lines[$idx] = '<?php \Phlex\Kraft\Response\PageResponse::importCSS(); ?>';
+				$lines[$idx] = '<?php \Phlex\Kraft\Response\PageView::importCSS(); ?>';
 			}elseif(substr($line,0,7) == "@style:"){
 				$css = trim(substr($line,7));
-				$lines[$idx] = '<?php \Phlex\Kraft\Response\PageResponse::addCSSInclude("'.$css.'"); ?>';
+				$lines[$idx] = '<?php \Phlex\Kraft\Response\PageView::addCSSInclude("'.$css.'"); ?>';
 			}elseif(substr($line,0,8) == "@script:"){
 				$js = trim(substr($line,8));
-				$lines[$idx] = '<?php \Phlex\Kraft\Response\PageResponse::addJSInclude("'.$js.'"); ?>';
+				$lines[$idx] = '<?php \Phlex\Kraft\Response\PageView::addJSInclude("'.$js.'"); ?>';
 			}elseif(substr($line,0,6) == "@ctns:"){
 				$ctns = trim(substr($line,6));
 				$lines[$idx] = '';
 				$this->ctNamespace = $ctns;
 			}if(false and $line == "@servervars"){
-				$lines[$idx] = '<?php \Phlex\Kraft\Response\PageResponse::renderServerVars(); ?>';
+				$lines[$idx] = '<?php \Phlex\Kraft\Response\PageView::renderServerVars(); ?>';
 
 			}
 			if(!$line)unset($lines[$idx]);

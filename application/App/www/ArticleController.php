@@ -1,6 +1,6 @@
 <?php namespace App\www;
 
-use Phlex\Kraft\Response\HtmlResponse;
+use Phlex\Kraft\Response\HtmlView;
 
 class ArticleController extends LayoutController{
 
@@ -13,7 +13,7 @@ class ArticleController extends LayoutController{
 	}
 
 	public function articleComment($args){
-		$view = HtmlResponse::factory('www/comments', $args);
+		$view = HtmlView::factory('www/comments', $args);
 		return $view;
 	}
 
@@ -22,14 +22,14 @@ class ArticleController extends LayoutController{
 	}
 
 	protected function getArticleContent($id){
-		$view = HtmlResponse::factory('www/article');
+		$view = HtmlView::factory('www/article');
 		$view['title'] = 'Article Title';
 		$view['body'] = 'Article Body';
 		return $view;
 	}
 
 	protected function getFooterView() {
-		$view = HtmlResponse::factory('www/footer_alt');
+		$view = HtmlView::factory('www/footer_alt');
 		//$view->setRenderer(array($this, 'renderFooter'));
 		$view['footer'] = 'NEW FOOTER*!';
 		return $view;

@@ -1,5 +1,7 @@
 <?php namespace Phlex\Tool\Tokenizer;
 
+use Phlex\Tool\StringTool;
+
 abstract class Tokenizer {
 	public $string;
 	public $pointer;
@@ -16,10 +18,13 @@ abstract class Tokenizer {
 		$this->stateObject = $this->createStartToken();
 		$this->stateObject->t = $this;
 		$this->pointer += $this->stateObject->shiftPointerBy;
-		$this->state = String::getPart('\\', get_class($this->stateObject), -1);
+		$this->state = StringTool::getPart('\\', get_class($this->stateObject), -1);
 	}
 
-	function createStartToken() { throw new Exception("Unimplemented method `Tokenizer::createStartToken`. "); return null;}
+	function createStartToken() {
+		throw new Exception("Unimplemented method `Tokenizer::createStartToken`. ");
+		return null;
+	}
 
 	function run() {
 		$string = '';
@@ -31,7 +36,7 @@ abstract class Tokenizer {
 				$this->stateObject = $result;
 				$this->stateObject->t = $this;
 				$this->pointer += $this->stateObject->shiftPointerBy;
-				$this->state = $this->state = \Phlex\Tool\PxString::getPart('\\', get_class($this->stateObject), -1);
+				$this->state = $this->state = \Phlex\Tool\StringTool::getPart('\\', get_class($this->stateObject), -1);
 				$string = '';
 			}else{
 				$string .= $this->string{$this->pointer};

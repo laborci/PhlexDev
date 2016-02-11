@@ -1,5 +1,7 @@
 <?php namespace Phlex\Request;
 
+use Phlex\Tool\StringTool;
+
 class Data extends \ArrayObject {
 		
 	const MATCH_GLOB = 0;
@@ -31,7 +33,7 @@ class Data extends \ArrayObject {
 	function has($key) { return $this->offsetExists($key); }
 	function getKey($key) { return parent::offsetGet($key); }
 	
-	function getAsBoolean($key) { return $this->has($key)?String::parseBool($this->getKey($key)):null; }
+	function getAsBoolean($key) { return $this->has($key)?StringTool::parseBool($this->getKey($key)):null; }
 	function getId($key) { return $this->getInt($key, 1); }
 	function getJSONDecoded($key, $assoc = true) {
 		if (!$this->has($key)) return null;

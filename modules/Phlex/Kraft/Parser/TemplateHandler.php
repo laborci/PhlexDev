@@ -1,6 +1,6 @@
 <?php namespace Phlex\Kraft\Parser;
 
-use Phlex\Config\Environment;
+use Phlex\Env\Environment;
 
 class TemplateHandler {
 

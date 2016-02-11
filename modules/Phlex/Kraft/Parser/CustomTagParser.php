@@ -3,9 +3,11 @@
 class CustomTagParser extends Parser{
 
 	protected $errorPrefix = 'KRAFT ViewTag ERROR';
+	protected $ctns;
 
 
-	public function parse($source){
+	public function parse($source, $ctns = '.CustomTag'){
+		$this->ctns = $ctns;
 		$tags = $this->findTagsByNameSpace('ct',$source);
 
 		foreach($tags as $tag){
@@ -21,7 +23,7 @@ class CustomTagParser extends Parser{
 	}
 
 	protected function createCustomTagCall($tag, $attributes){
-		if($tag[0] != '.') $tag = 'CustomTag.'.$tag;
+		if($tag[0] != '.') $tag = $this->ctns.'.'.$tag;
 		$class = str_replace('.','\\',$tag);
 		$attributes = $this->parseKraftAttributes($attributes);
 		return '<?php '.$class.'::factory(array('.$attributes.'), $this)->renderTag(); ?>';

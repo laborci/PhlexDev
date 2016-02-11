@@ -19,4 +19,5 @@ class App{
 			->get('/article/*', function(){ return ArticleController::factory()->articlePage(); })
 		;
 	}
+
 }

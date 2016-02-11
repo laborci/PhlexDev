@@ -1,15 +1,15 @@
 <?php namespace Phlex\Kraft;
 
-use Phlex\Kraft\Response\HtmlResponse;
+use Phlex\Kraft\Response\HtmlView;
 
 abstract class CustomTag {
 
 	/**
-	 * @var HtmlResponse
+	 * @var HtmlView
 	 */
 	protected $view = null;
 	/**
-	 * @var HtmlResponse
+	 * @var HtmlView
 	 */
 	protected $parentView = null;
 	/**
@@ -25,7 +25,7 @@ abstract class CustomTag {
 	/**
 	 * @param $args
 	 *
-	 * @return HtmlResponse
+	 * @return HtmlView
 	 */
 	abstract protected function createView($args);
 
