@@ -19,7 +19,7 @@ abstract class Response implements \ArrayAccess{
 
 	function render(){
 		ob_start();
-		print_r($this->data);
+		var_dump($this->data);
 		return ob_get_clean();
 	}
 

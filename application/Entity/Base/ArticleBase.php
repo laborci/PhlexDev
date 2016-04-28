@@ -29,7 +29,10 @@ fields: {
 		refers: User
 	}
 }
+
 */
+
+
 class ArticleBase extends \Phlex\RedFox\Entity {
 
 	protected $id;
