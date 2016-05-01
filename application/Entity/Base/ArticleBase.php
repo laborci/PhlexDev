@@ -52,7 +52,6 @@ class ArticleBase extends \Phlex\RedFox\Entity {
 		}
 		$getterMethodName = '__get' . ucfirst($name);
 		if (method_exists($this, $getterMethodName)) return $this->$getterMethodName();
-
 	}
 
 	protected function dehidrate() {

@@ -11,22 +11,8 @@
 
  */
 
-class Entity{
-
-
-}
-
-class ArticleBase extends Entity{
-
-
+abstract class Entity{
 	protected static $model;
-
-	protected $publishDate;
-	protected $title;
-	protected $lead;
-	protected $authorId;
-	protected $author;
-
 
 	/**
 	 * @return Model
@@ -36,37 +22,65 @@ class ArticleBase extends Entity{
 		return static::$model;
 	}
 
+	public static function polishModel($model){return $model;}
+
+}
+
+abstract class ArticleBase extends Entity{
+
+	protected $publishDate;
+	protected $title;
+	protected $lead;
+	protected $authorId;
+	protected $author;
+
+	protected function __get($name){
+
+	}
+
+	protected function __set($name, $value){
+
+	}
+
 	public static function buildModel(){
-		$model = new Model('default', 'Article');
 
 		$model['title'] = new StringField('title', false);
-		$model['lead']->addValidator(
-			StringValidator::Max(255)
-		);
+		$model['title']->maxLength = 255;
 
 		$model['lead'] = new StringField('lead', false);
-		$model['lead']->addValidator(
-			StringValidator::Max(65000)
-		);
+		$model['lead']->maxLength = 65536;
+
+		$model['type'] = new EnumField('type', false);
+		$model['enum']->values = array('news', 'article', 'feature', 'blogpost');
 
 		$model['publishDate'] = new DateTimeField('publishDate', false);
 
 		$model['authorId'] = new IntegerField('authorId', true);
-		$model['authorId']->addValidator(
-			IntegerValidator::Type(4, IntegerValidator::SIGNED)
-		);
+		$model['authorId']->min = 0;
+		$model['authorId']->max = 65536;
+		$model['authorId']->referenceTo('user');
 
-
-		static::$model = static::extendModel($model);
+		static::$model = static::polishModel($model);
 	}
 
-	// - - - - - - - - - - - do not modify lines above this line - - - - - - - - - - - - - - - - - - -
+}
 
-	public static function extendModel($model){
-		$model['authorId']->reference('\App\Entity\User');
 
-		$model[publishDate]->addValidator(
-			DateTimeValidator::InTheFuture()
+
+class Article extends ArticleBase{
+
+	public $title;
+	public $lead;
+
+	/**
+	 * @param Model $model
+	 *
+	 * @return mixed
+	 */
+	public static function polishModel($model){
+
+		$model['publishDate']->addValidator(
+			//DateTimeValidator::InTheFuture()
 		);
 		$model['publishDate']->default = function(){ return time(); };
 
@@ -74,22 +88,7 @@ class ArticleBase extends Entity{
 	}
 
 
-	protected $author;
-
-	protected function __getAuthor(){
-
-	}
-
-	protected function setAuthor($author){
-
-	}
-}
-
-class Article extends ArticleBase{
-
-	public $title;
-	public $lead;
-
+	
 }
 
 
@@ -104,22 +103,10 @@ class Model implements \ArrayAccess{
 		$this->table = $table;
 	}
 
-	public function offsetExists($offset) {
-		return array_key_exists($offset, $this->fields);
-	}
-
-	public function offsetGet($offset) {
-		return $this->fields[$offset]
-	}
-
-	public function offsetSet($offset, $value) {
-		$this->fields[$value];
-	}
-
-	public function offsetUnset($offset) {
-		unset($this->fields[$offset]);
-	}
-
+	public function offsetExists($offset) { return array_key_exists($offset, $this->fields); }
+	public function offsetGet($offset) { return $this->fields[$offset]; }
+	public function offsetSet($offset, $value) { $this->fields[$value]; }
+	public function offsetUnset($offset) { unset($this->fields[$offset]); }
 
 }
 
@@ -143,9 +130,13 @@ abstract class ModelField {
 	protected $options; // for enum or set
 
 
+	public function addValidator($validator){
+		$this->validators[] = $validator;
+	}
 
 
 	protected function validate($value){
+		if($value === null) return $this->null;
 
 	}
 
@@ -165,6 +156,28 @@ abstract class ModelField {
 	}
 }
 
+class SetField extends ModelField{
+	protected $options;
+
+}
+
+class EnumField extends ModelField{
+	protected $options;
+
+}
+
 class StringField extends ModelField{
+
+}
+
+class JsonField extends StringField{
+
+}
+
+class DateField extends ModelField{
+
+}
+
+class DateTimeField extends ModelField{
 
 }
