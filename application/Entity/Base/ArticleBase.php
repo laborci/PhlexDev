@@ -1,12 +1,5 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: elvis
- * Date: 13/02/16
- * Time: 13:52
- */
-
-namespace Entity;
+<?php namespace Entity\Base;
+use \Phlex\RedFox\Entity;
 
 /*
 
@@ -33,39 +26,41 @@ fields: {
 */
 
 
-class ArticleBase extends \Phlex\RedFox\Entity {
+abstract class ArticleBase extends Entity{
 
-	protected $id;
+	protected $publishDate;
 	protected $title;
+	protected $lead;
 	protected $authorId;
-	protected $author; // just to prevent writes
-	protected $body;
+	protected $author;
 
-	function __get($name) {
-		switch ($name) {
-			case 'id':
-				return $this->id;
-				break;
-			case 'author':
-				return User::load($this->authorId);
-				break;
-		}
-		$getterMethodName = '__get' . ucfirst($name);
-		if (method_exists($this, $getterMethodName)) return $this->$getterMethodName();
+	protected function __get($name){
+
 	}
 
-	protected function dehidrate() {
-		return array(
-			'id'    => $this->id,
-			'title' => $this->title,
-			'body'  => $this->body
-		);
+	protected function __set($name, $value){
+
 	}
 
-	protected function hidrate($data) {
-		if (array_key_exists('id', $data)) $this->id = $data['id'];
-		if (array_key_exists('title', $data)) $this->title = $data['title'];
-		if (array_key_exists('body', $data)) $this->body = $data['body'];
+	public static function buildModel(){
+
+		$model['title'] = new \Phlex\RedFox\Model\Field\StringField('title', false);
+		$model['title']->maxLength = 255;
+
+		$model['lead'] = new \Phlex\RedFox\Model\Field\StringField('lead', false);
+		$model['lead']->maxLength = 65536;
+
+		$model['type'] = new \Phlex\RedFox\Model\Field\EnumField('type', false);
+		$model['enum']->values = array('news', 'article', 'feature', 'blogpost');
+
+		$model['publishDate'] = new \Phlex\RedFox\Model\Field\DateTimeField('publishDate', false);
+
+		$model['authorId'] = new \Phlex\RedFox\Model\Field\IntegerField('authorId', true);
+		$model['authorId']->min = 0;
+		$model['authorId']->max = 65536;
+		$model['authorId']->referenceTo('\Entity\User');
+
+		static::$model = static::polishModel($model);
 	}
 
 }
