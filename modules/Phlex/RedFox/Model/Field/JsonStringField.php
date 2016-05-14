@@ -7,22 +7,26 @@
  */
 
 namespace Phlex\RedFox\Model\Field;
+use Phlex\RedFox\Model\Converter;
 use Phlex\RedFox\Model\Field;
 
-class JsonStringField extends Field{
-	protected $maxLenght;
+class JsonStringField extends StringField implements Converter{
 
-	protected function typevalidator($value) {
-		return 0;
-	}
+	/**
+	 * JsonStringField constructor.
+	 *
+	 * @param $stringField StringField
+	 */
+	function __construct($stringField) { parent::__construct($stringField->name, $stringField->null, $stringField->maxLength); }
 
-	protected function packValue($value) {
-		return json_encode($value);
-	}
-
-	protected function unpackValue($value) {
+	public function convertRead($value) {
 		return json_decode($value, true);
 	}
 
+	public function convertWrite($value) {
+		return json_encode($value);
+	}
+
+	public $aaaa = 1;
 
 }

@@ -1,9 +1,8 @@
 <?php namespace Entity;
 
-use Entity\Base\ArticleBase;
+use Entity\Base\Article as Base;
 use Entity\Base\ArticleModel;
 use Phlex\RedFox\Model\Field;
-use Phlex\RedFox\Model\Model;
 use Phlex\RedFox\Relation;
 
 /**
@@ -12,25 +11,24 @@ use Phlex\RedFox\Relation;
  * @package Entity
  * @property-read Article $author
  * @property-read string $title
+ * @property \DateTime $publishDate
  */
-class Article extends ArticleBase{
+class Article extends Base{
 
 	public $lead;
-	public $publishDate;
+	public $data;
 
-	/**
-	 * @param $model ArticleModel
-	 *
-	 * @return ArticleModel
-	 */
+	/** @param $model ArticleModel */
 	public static function decorateModel($model){
 		$model->authorId->setMin(50);
-		$model->publishDate->default = function(){ return time(); };
-		$model->publishDate->access = Field::READ + Field::WRITE_ONCE;
-		$model->title->access = Field::READ;
 		$model->author = new Relation( 'authorId', \Entity\ArticleRepository::instance() );
 
-		return $model;
+		$model->publishDate->setDefault( function(){ return time(); } );
+		$model->publishDate->access = Field::READ + Field::WRITE_ONCE;
+
+		$model->title->access = Field::READ;
+
+		$model->data = new Field\JsonStringField( $model->data );
 	}
 
 

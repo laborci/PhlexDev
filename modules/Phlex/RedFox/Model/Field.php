@@ -18,9 +18,13 @@ abstract class Field {
 
 	protected $name; // db field name
 	protected $validators = array();
-
 	protected $null; // null allowed
-	protected $defaultValue; // can be scalar or callable
+
+	protected $default; // can be scalar or callable
+
+	public function setDefault($value){
+		$this->default = $value;
+	}
 
 	public function addValidator($validator){
 		$this->validators[] = $validator;

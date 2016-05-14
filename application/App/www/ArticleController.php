@@ -16,11 +16,11 @@ class ArticleController extends LayoutController {
 
 
 		$article = new Article();
-		$article->author->lead;
+		$article;
 		
 		echo '<pre>';
 		var_dump(property_exists($articleModel, 'title'));
-		var_dump($articleModel->title);
+		var_dump($articleModel->data);
 		echo '</pre>';
 
 		return $view;

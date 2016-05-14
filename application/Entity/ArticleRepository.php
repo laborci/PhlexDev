@@ -1,17 +1,8 @@
-<?php
-/**
- * Author: Laborci Gergely
- * Copyright: 365 Media Ltd. (www.365media.hu)
- * Created: 14/05/16 22:14
- */
+<?php namespace Entity;
 
-namespace Entity;
+use \Entity\Base\ArticleRepository as Repository;
 
-
-use Phlex\RedFox\EntityRepository;
-
-class ArticleRepository extends EntityRepository{
-	protected static $__instance = null;
+class ArticleRepository extends Repository{
 
 
 }

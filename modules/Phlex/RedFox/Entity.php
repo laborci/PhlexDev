@@ -10,7 +10,7 @@ abstract class Entity {
 	/**
 	 * @return Model
 	 */
-	public static function model(){return null;}
+	public function model(){return null;}
 
 	public function __get($propertyName) {
 		
@@ -19,7 +19,7 @@ abstract class Entity {
 			return $this->$methodName();
 		}
 
-		$model = static::model();
+		$model = $this->model();
 		if(property_exists($model, $propertyName)){
 			$property = $model->$propertyName;
 			if($model->$propertyName instanceof Relation){
@@ -42,7 +42,7 @@ abstract class Entity {
 			return;
 		}
 
-		$model = static::model();
+		$model = $this->model();
 		if(property_exists($model, $propertyName)){
 			$property = $model->$propertyName;
 			
