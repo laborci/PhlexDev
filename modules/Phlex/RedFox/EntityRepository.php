@@ -13,22 +13,29 @@ use Phlex\ResourceManager;
 
 abstract class EntityRepository {
 
-
+	protected $database;
+	protected $table;
 
 	/**
 	 * @var Access
 	 */
-	private $DBAccess;
-	protected function __construct() {
-		$this->db = ResourceManager::db(static::$database);
-	}
+	private $DBAccess = null;
 
 	/**
 	 * @return \Phlex\Database\Access
 	 */
 	function getDBAccess(){
+		if($this->DBAccess == null) $this->DBAccess = ResourceManager::db($this->database);
 		return $this->DBAccess;
 	}
+
+
+	/**
+	 * @param $data
+	 *
+	 * @return Entity
+	 */
+	abstract protected function createInstance($data);
 
 
 	protected static $__instance;
@@ -44,9 +51,9 @@ abstract class EntityRepository {
 	/**
 	 * @param $id
 	 *
-	 * @return static
+	 * @return Entity
 	 */
 	public function get($id) {
-
+		return $this->createInstance( $this->getDBAccess()->getRowById($this->table, $id) );
 	}
 }

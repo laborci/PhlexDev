@@ -2,6 +2,7 @@
 
 use Entity\Article;
 use Entity\Base\ArticleModel;
+use Entity\Base\ArticleRepository;
 use Phlex\Kraft\Response\HtmlView;
 
 class ArticleController extends LayoutController {
@@ -16,11 +17,15 @@ class ArticleController extends LayoutController {
 
 
 		$article = new Article();
-		$article;
-		
+
+		$firstArticle = ArticleRepository::instance()->get(1);
 		echo '<pre>';
-		var_dump(property_exists($articleModel, 'title'));
-		var_dump($articleModel->data);
+		print_r($firstArticle);
+		//print_r($firstArticle->author->title);
+
+
+		//var_dump(property_exists($articleModel, 'title'));
+		//var_dump($articleModel->data);
 		echo '</pre>';
 
 		return $view;

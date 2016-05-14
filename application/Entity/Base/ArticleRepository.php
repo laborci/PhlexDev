@@ -1,18 +1,32 @@
-<?php
-/**
- * Author: Laborci Gergely
- * Copyright: 365 Media Ltd. (www.365media.hu)
- * Created: 14/05/16 23:31
- */
+<?php namespace Entity\Base;
 
-namespace Entity\Base;
-
-
+use Entity\Article;
 use Phlex\RedFox\EntityRepository;
-use Phlex\ResourceManager;
+use Phlex\RedFox\Model\Field;
 
+
+/**
+ * Class ArticleRepository
+ *
+ * @package Entity\Base
+ * @method Article get(int $id)
+ */
 class ArticleRepository extends EntityRepository{
-	protected static $__nstance = null;
-	public static $database = 'default';
-	protected static $table= 'article';
+
+	protected static $__instance = null;
+
+	protected function __construct() {
+		$this->database = 'app';
+		$this->table = 'article';
+	}
+
+	/**
+	 * @param $data
+	 *
+	 * @return static
+	 */
+	protected function createInstance($data){
+		return Article::instantiate($data);
+	}
+
 }

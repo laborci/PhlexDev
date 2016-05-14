@@ -8,6 +8,8 @@
 namespace Phlex\RedFox;
 
 
+use Phlex\RedFox\Model\Field\IntegerField;
+
 class Relation{
 	/**
 	 * @var EntityRepository
@@ -18,12 +20,12 @@ class Relation{
 	/**
 	 * Relation constructor.
 	 *
-	 * @param $reference string
+	 * @param $reference IntegerField
 	 * @param $repository EntityRepository
 	 */
 	function __construct($reference, $repository) {
 		$this->repository = $repository;
-		$this->reference = $reference;
+		$this->reference = $reference->getFieldName();
 	}
 
 	/**

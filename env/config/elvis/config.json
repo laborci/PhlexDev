@@ -4,6 +4,6 @@
 	"domain": "phlex6.dev",
 	"root": "/htdocs/{{app}}/",
 	"databases": {
-		"app": "@db:root:awd@localhost/{{app}}"
+		"app": "@db:root:awd@localhost/phlexdev"
 	}
 }

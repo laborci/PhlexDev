@@ -1,5 +1,6 @@
 <?php namespace Phlex\RedFox;
 
+use Phlex\RedFox\Model\Converter;
 use Phlex\RedFox\Model\Field;
 use Phlex\RedFox\Model\Model;
 
@@ -12,6 +13,30 @@ abstract class Entity {
 	 */
 	public function model(){return null;}
 
+	/**
+	 * @param $data array
+	 *
+	 * @return static
+	 */
+	public static function instantiate($data){
+		$instance = new static();
+		$model = $instance->model();
+
+		foreach($data as $key => $value) {
+			if(property_exists($model, $key) && $model->$key instanceof Field){
+				if($model->$key instanceof Converter){
+					$instance->$key = $model->$key->convertRead($value);
+				} else {
+					$instance->$key = $value;
+				}
+			}
+		}
+		
+		return $instance;
+	}
+
+
+
 	public function __get($propertyName) {
 		
 		if (method_exists($this, '__get' . ucfirst($propertyName))) {
@@ -21,6 +46,7 @@ abstract class Entity {
 
 		$model = $this->model();
 		if(property_exists($model, $propertyName)){
+
 			$property = $model->$propertyName;
 			if($model->$propertyName instanceof Relation){
 				/** @var $property Relation */
@@ -35,7 +61,11 @@ abstract class Entity {
 		return null;
 	}
 	
+	
+	
+	
 	public function __set($propertyName, $value){
+		
 		if (method_exists($this, '__set' . ucfirst($propertyName))) {
 			$methodName = '__set' . ucfirst($propertyName);
 			$this->$methodName($value);

@@ -14,9 +14,23 @@ abstract class Field {
 	const WRITE = 2;
 	const WRITE_ONCE = 4;
 
+	/**
+	 * @var int
+	 */
 	public $access = 0;
 
-	protected $name; // db field name
+	/**
+	 * @var string
+	 */
+	protected $name;
+
+	/**
+	 * @return string
+	 */
+	public function getFieldName() {
+		return $this->name;
+	}
+
 	protected $validators = array();
 	protected $null; // null allowed
 

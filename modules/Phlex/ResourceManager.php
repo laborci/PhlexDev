@@ -14,7 +14,7 @@ class ResourceManager {
 	static function db($name){
 		if(array_key_exists($name, static::$databaseConnections) === false){
 			$env = Env\Environment::instance();
-			static::$databaseConnections[$name] = new Access($env['database'][$name]);
+			static::$databaseConnections[$name] = new Access($env['databases'][$name]);
 		} 
 		return static::$databaseConnections[$name];
 	}

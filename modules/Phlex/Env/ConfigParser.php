@@ -89,6 +89,7 @@ class ConfigParser {
 
 	static function valueParserDBConn($value){
 		if(substr($value, 0, 4) == '@db:'){
+			$value = substr($value, 4);
 			$pattern = "(([\w\d]*):(.*?)@([\w\d\.]*)\/([\w\d]*))";
 			preg_match($pattern, trim($value), $matches);
 			$database = Array(

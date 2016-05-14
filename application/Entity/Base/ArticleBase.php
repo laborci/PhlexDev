@@ -6,11 +6,11 @@ use Phlex\ResourceManager;
 
 
 /**
- * Class Article
+ * Class ArticleBase
  * @package Entity\Base
  */
 
-abstract class Article extends Entity{
+abstract class ArticleBase extends Entity{
 	protected $publishDate;
 	protected $title;
 	protected $lead;
@@ -23,28 +23,3 @@ abstract class Article extends Entity{
 	public function model(){ return ArticleModel::instance(); }
 
 }
-
-
-
-/*
-visibility:
-   public
-	protected
-	readonly (protected with autogetter)
-	rock (protected / can be write only if current value is null) |
-
-fields: {
-	id: {
-		name: "id",
-		type: numeric,
-		visibility: rock
-	}
-	authorId:{
-		name: "authorId",
-		type: numeric,
-		visibility: public
-		refers: User
-	}
-}
-
-*/
