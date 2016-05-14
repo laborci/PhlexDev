@@ -11,6 +11,7 @@ use Phlex\RedFox\Model\Field;
 
 class DateTimeField extends Field{
 
+
 	protected function typevalidator($value) {
 		return 0;
 	}

@@ -17,8 +17,11 @@ spl_autoload_register( function($class){
 });
 
 spl_autoload_register( function($class){
-	$file = dirname(__FILE__).'/entities/'.$class.'.php';
-	if(file_exists($file)) require_once $file;
+	if(substr($class, 0, 7) == 'Entity\\'){
+		$class = substr($class, 7);
+		$file = dirname( __FILE__ ).'/Entity/'.str_replace('\\', '/', $class) . '.php';
+		if(file_exists($file)) require_once $file;
+	}
 });
 
 spl_autoload_register( function($class){

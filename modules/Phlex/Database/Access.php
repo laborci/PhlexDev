@@ -5,6 +5,8 @@ use PDOException;
 
 class Access {
 
+	static $connections = array();
+
 	public $dbServerData;
 	/**
 	 * @var \PDO
@@ -37,7 +39,10 @@ class Access {
 			$this->db = new PDO(
 				'mysql:host='.$this->dbServerData['server'].';dbname='.$this->dbServerData['database'].';charset='.$this->charSet,
 				$this->dbServerData['user'],
-				$this->dbServerData['password']
+				$this->dbServerData['password'],
+				array(
+					PDO::ATTR_PERSISTENT => true
+				)
 			);
 			$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$this->db->prepare("SET CHARACTER SET ?")->execute(array($this->charSet));

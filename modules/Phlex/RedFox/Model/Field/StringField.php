@@ -10,7 +10,12 @@ namespace Phlex\RedFox\Model\Field;
 use Phlex\RedFox\Model\Field;
 
 class StringField extends Field{
-	protected $maxLenght;
+	protected $maxLength;
+
+	function __construct($name, $null, $maxLength) {
+		parent::__construct($name, $null);
+		$this->maxLength = $maxLength;
+	}
 
 	protected function typevalidator($value) {
 		if(!is_string($value)) return 1;

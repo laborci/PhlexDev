@@ -1,5 +1,7 @@
 <?php namespace Entity\Base;
+use Entity\Article;
 use \Phlex\RedFox\Entity;
+use Phlex\ResourceManager;
 
 /*
 
@@ -26,41 +28,32 @@ fields: {
 */
 
 
+/**
+ * Class ArticleBase
+ * @package Entity\Base
+ *          
+ * @property-read string $author
+ */
+
 abstract class ArticleBase extends Entity{
 
 	protected $publishDate;
 	protected $title;
 	protected $lead;
 	protected $authorId;
-	protected $author;
 
-	protected function __get($name){
+	const DATABASE_NAME = 'default';
+	const TABLE = 'article';
 
+	/**
+	 * @return Access
+	 */
+	public function getDBAccess(){ return ResourceManager::db(static::DATABASE_NAME); }
+
+	protected function __getAuthor(){
+		if($this->authorId) return ArticleModel::instance()->authorId->getRelatedObject($this->authorId);
+		return null;
 	}
 
-	protected function __set($name, $value){
-
-	}
-
-	public static function buildModel(){
-
-		$model['title'] = new \Phlex\RedFox\Model\Field\StringField('title', false);
-		$model['title']->maxLength = 255;
-
-		$model['lead'] = new \Phlex\RedFox\Model\Field\StringField('lead', false);
-		$model['lead']->maxLength = 65536;
-
-		$model['type'] = new \Phlex\RedFox\Model\Field\EnumField('type', false);
-		$model['enum']->values = array('news', 'article', 'feature', 'blogpost');
-
-		$model['publishDate'] = new \Phlex\RedFox\Model\Field\DateTimeField('publishDate', false);
-
-		$model['authorId'] = new \Phlex\RedFox\Model\Field\IntegerField('authorId', true);
-		$model['authorId']->min = 0;
-		$model['authorId']->max = 65536;
-		$model['authorId']->referenceTo('\Entity\User');
-
-		static::$model = static::polishModel($model);
-	}
-
+	
 }

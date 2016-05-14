@@ -1,16 +1,16 @@
 <?php namespace Phlex\RedFox;
 
-abstract class Entity{
-	protected static $model;
+abstract class Entity {
 
-	/**
-	 * @return Model
-	 */
-	public static function getModel(){
-		if(static::$model === null) static::buildModel();
-		return static::$model;
+	public static function decorateModel($model){}
+
+	public function __get($propertyName) {
+		if (method_exists($this, '__get' . ucfirst($propertyName))) {
+			$methodName = '__get' . ucfirst($propertyName);
+			return $this->$methodName();
+		}
+		return null;
 	}
 
-	public static function polishModel($model){return $model;}
 
 }
