@@ -15,8 +15,12 @@ class ArticleController extends LayoutController {
 		$articleModel = ArticleModel::instance();
 
 
+		$article = new Article();
+		$article->author->lead;
+		
 		echo '<pre>';
-		print_r($articleModel);
+		var_dump(property_exists($articleModel, 'title'));
+		var_dump($articleModel->title);
 		echo '</pre>';
 
 		return $view;

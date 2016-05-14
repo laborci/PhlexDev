@@ -8,7 +8,7 @@
 namespace Entity;
 
 
-use Phlex\RedFox\Model\EntityRepository;
+use Phlex\RedFox\EntityRepository;
 
 class ArticleRepository extends EntityRepository{
 	protected static $__instance = null;

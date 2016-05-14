@@ -5,7 +5,7 @@
  * Created: 14/05/16 22:23
  */
 
-namespace Phlex\RedFox\Model;
+namespace Phlex\RedFox;
 
 
 abstract class EntityRepository {

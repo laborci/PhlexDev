@@ -8,11 +8,13 @@
 namespace Entity\Base;
 
 use Entity\Article;
+use Phlex\RedFox\EntityRepository;
 use Phlex\RedFox\Model\Field\DateTimeField;
 use Phlex\RedFox\Model\Field\EnumField;
 use Phlex\RedFox\Model\Field\IntegerField;
 use Phlex\RedFox\Model\Field\StringField;
 use Phlex\RedFox\Model\Model;
+use Phlex\RedFox\Relation;
 
 class ArticleModel extends Model{
 	protected static $__instance = null;
@@ -48,7 +50,6 @@ class ArticleModel extends Model{
 		$this->type = new EnumField('type', false, array('news', 'article', 'feature', 'blogpost'));
 		$this->publishDate = new DateTimeField('publishDate', false);
 		$this->authorId = new IntegerField('authorId', true, 0, 65536);
-		$this->authorId->setRelation( \Entity\ArticleRepository::instance() );
 
 		Article::decorateModel($this);
 	}

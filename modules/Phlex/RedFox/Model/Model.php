@@ -4,6 +4,7 @@ use Phlex\Database\Access;
 use Phlex\ResourceManager;
 
 abstract class Model {
+
 	/**
 	 * @return static
 	 */

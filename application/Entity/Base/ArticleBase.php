@@ -31,12 +31,11 @@ fields: {
 /**
  * Class ArticleBase
  * @package Entity\Base
- *          
- * @property-read string $author
  */
 
 abstract class ArticleBase extends Entity{
 
+	
 	protected $publishDate;
 	protected $title;
 	protected $lead;
@@ -49,9 +48,9 @@ abstract class ArticleBase extends Entity{
 	 * @return Access
 	 */
 	public function getDBAccess(){ return ResourceManager::db(static::DATABASE_NAME); }
-
+	public static function model(){ return ArticleModel::instance(); }
 	protected function __getAuthor(){
-		if($this->authorId) return ArticleModel::instance()->authorId->getRelatedObject($this->authorId);
+		if($this->authorId) return static::model()->authorId->getRelatedObject($this->authorId);
 		return null;
 	}
 

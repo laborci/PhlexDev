@@ -10,6 +10,12 @@ namespace Phlex\RedFox\Model;
 
 abstract class Field {
 
+	const READ = 1;
+	const WRITE = 2;
+	const WRITE_ONCE = 4;
+
+	public $access = 0;
+
 	protected $name; // db field name
 	protected $validators = array();
 
@@ -27,6 +33,7 @@ abstract class Field {
 	}
 
 	abstract protected function typevalidator($value);
+	
 	protected function packValue($value) { return $value; }
 	protected function unpackValue($value) { return $value; }
 
@@ -35,11 +42,11 @@ abstract class Field {
 		$this->null = $null;
 	}
 
-	public function __get($varName) {
+	/*public function __get($varName) {
 		switch ($varName) {
 			case 'name':
 				return $this->name;
 				break;
 		}
-	}
+	}*/
 }

@@ -35,25 +35,4 @@ class IntegerField extends Field{
 	}
 
 
-	/**
-	 * @var EntityRepository
-	 */
-	protected $relatedRepository;
-
-	/**
-	 * @param $repository EntityRepository
-	 */
-	function setRelation($repository){
-		$this->relatedRepository = $repository;
-	}
-
-	/**
-	 * @param $id
-	 *
-	 * @return mixed
-	 */
-	function getRelatedObject($id){
-		return $this->relatedRepository->get($id);
-	}
-
 }
