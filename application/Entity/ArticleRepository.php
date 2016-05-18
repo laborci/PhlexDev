@@ -1,8 +1,8 @@
 <?php namespace Entity;
 
-use \Entity\Base\ArticleRepository as Repository;
+use \Entity\Base\ArticleRepositoryBase;
 
-class ArticleRepository extends Repository{
+class ArticleRepository extends ArticleRepositoryBase{
 
 
 }

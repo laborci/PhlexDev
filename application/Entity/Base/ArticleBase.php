@@ -1,8 +1,8 @@
 <?php namespace Entity\Base;
 
 use Entity\ArticleRepository;
-use \Phlex\RedFox\Entity;
-use Phlex\ResourceManager;
+use Phlex\Database\Access;
+use Phlex\RedFox\Entity;
 
 
 /**
@@ -20,6 +20,10 @@ abstract class ArticleBase extends Entity{
 	 * @return Access
 	 */
 	public function getDBAccess(){ return ArticleRepository::instance()->getDBAccess(); }
+
+	/**
+	 * @return ArticleModel
+	 */
 	public function model(){ return ArticleModel::instance(); }
 
 }

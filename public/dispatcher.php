@@ -11,6 +11,7 @@ $env = \Phlex\Env\Environment::instance();
 if($env['dev-mode']){
 	// system('php '.$env['root'].'phlex.php config -q');
 	system('php '.$env['root'].'phlex.php build -q -f');
+	\Phlex\Debug::setup();
 }
 
 $dispatcher = new Phlex\Routing\Dispatcher(\Phlex\Request\Request::getCurrent());

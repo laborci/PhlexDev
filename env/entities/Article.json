@@ -1,0 +1,104 @@
+{
+	"entity": "Article",
+	"write": true,
+	"database": "app",
+	"table": "article",
+	"type": "table",
+	"fields": {
+		"id": {
+			"db": {
+				"null": false,
+				"datatype": "int",
+				"type": "integer",
+				"min": 0,
+				"max": 4294967295,
+				"signed": false
+			},
+			"write": false
+		},
+		"title": {
+			"db": {
+				"null": true,
+				"datatype": "varchar",
+				"type": "string",
+				"maxLength": "255"
+			},
+			"write": true,
+			"serialization": null
+		},
+		"lead": {
+			"db": {
+				"null": true,
+				"datatype": "varchar",
+				"type": "string",
+				"maxLength": "40"
+			},
+			"write": true,
+			"serialization": null
+		},
+		"authorId": {
+			"db": {
+				"null": true,
+				"datatype": "int",
+				"type": "integer",
+				"min": 0,
+				"max": 4294967295,
+				"signed": false
+			},
+			"write": true,
+			"relation": null
+		},
+		"data": {
+			"db": {
+				"null": true,
+				"datatype": "mediumtext",
+				"type": "string",
+				"maxLength": "16777215"
+			},
+			"write": true,
+			"serialization": null
+		},
+		"publishDate": {
+			"db": {
+				"null": true,
+				"datatype": "datetime",
+				"type": "datetime"
+			},
+			"write": true
+		},
+		"type": {
+			"db": {
+				"null": true,
+				"datatype": "enum",
+				"type": "enum",
+				"options": [
+					"news",
+					"article",
+					"feature",
+					"blogpost"
+				]
+			},
+			"write": true
+		},
+		"a": {
+			"db": {
+				"null": true,
+				"datatype": "float",
+				"type": "float",
+				"signed": false
+			},
+			"write": true
+		},
+		"b": {
+			"db": {
+				"null": true,
+				"datatype": "tinyint",
+				"type": "integer",
+				"min": -128,
+				"max": 127,
+				"signed": true
+			},
+			"write": true
+		}
+	}
+}

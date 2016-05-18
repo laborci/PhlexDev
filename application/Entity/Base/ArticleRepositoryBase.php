@@ -1,17 +1,19 @@
 <?php namespace Entity\Base;
 
+
 use Entity\Article;
+use Phlex\RedFox\Entity;
 use Phlex\RedFox\EntityRepository;
 use Phlex\RedFox\Model\Field;
 
 
 /**
- * Class ArticleRepository
+ * Class ArticleRepositoryBase
  *
  * @package Entity\Base
  * @method Article get(int $id)
  */
-class ArticleRepository extends EntityRepository{
+class ArticleRepositoryBase extends EntityRepository {
 
 	protected static $__instance = null;
 
@@ -21,12 +23,15 @@ class ArticleRepository extends EntityRepository{
 	}
 
 	/**
-	 * @param $data
-	 *
+	 * @param array $data
 	 * @return static
 	 */
-	protected function createInstance($data){
-		return Article::instantiate($data);
-	}
+	protected function createInstance($data) { return Article::instantiate($data); }
+
+	/**
+	 * @param Entity $object
+	 * @return bool
+	 */
+	public function checkInstance($object) { return $object instanceof Article; }
 
 }

@@ -1,13 +1,7 @@
-<?php
-/**
- * Author: Laborci Gergely
- * Copyright: 365 Media Ltd. (www.365media.hu)
- * Created: 14/05/16 20:00
- */
-
-namespace Entity\Base;
+<?php namespace Entity\Base;
 
 use Entity\Article;
+
 use Phlex\RedFox\Model\Field\DateTimeField;
 use Phlex\RedFox\Model\Field\EnumField;
 use Phlex\RedFox\Model\Field\IntegerField;
@@ -56,9 +50,11 @@ class ArticleModel extends Model{
 		$this->publishDate = new DateTimeField('publishDate', false);
 		$this->authorId = new IntegerField('authorId', true, 0, 65536);
 		$this->data = new StringField('data', false, 0, 65536);
-		Article::decorateModel($this);
+
+		if(method_exists('Entity\\Article', 'decorateModel'))	Article::decorateModel($this);
+
 	}
-
-
-
+	
+	
+	
 }

@@ -10,31 +10,61 @@ namespace Phlex\RedFox;
 
 use Phlex\RedFox\Model\Field\IntegerField;
 
-class Relation{
+
+class Relation {
+
 	/**
 	 * @var EntityRepository
 	 */
 	protected $repository;
+	/**
+	 * @var \Phlex\RedFox\Model\Field\IntegerField
+	 */
 	protected $reference;
+	/**
+	 * @var string
+	 */
+	protected $name;
 
 	/**
-	 * Relation constructor.
-	 *
-	 * @param $reference IntegerField
-	 * @param $repository EntityRepository
+	 * Returns the field name
+	 * @return string
 	 */
-	function __construct($reference, $repository) {
-		$this->repository = $repository;
-		$this->reference = $reference->getFieldName();
+	public function getFieldName() {
+		return $this->name;
 	}
 
 	/**
+	 * Relation constructor.
+	 * @param $reference  IntegerField
+	 * @param $repository EntityRepository
+	 */
+	function __construct($name, $reference, $repository) {
+		$this->repository = $repository;
+		$this->reference = $reference;
+	}
+
+	/**
+	 * Gets related object
 	 * @param $object
-	 *
 	 * @return mixed
 	 */
-	function getRelatedObject($object){
-		$reference = $this->reference;
+	function getRelatedObject($object) {
+		$reference = $this->reference->getFieldName();
 		return $this->repository->get($object->$reference);
+	}
+
+	/**
+	 * Sets related object
+	 * @param Entity $object
+	 * @param Entity $related
+	 */
+	function setRelatedObject($object, $related) {
+		if ($this->repository->checkInstance($related)) {
+			$fieldName = $this->name;
+			$reference = $this->reference->getFieldName();
+			$object->$fieldName = $related;
+			$object->$reference = $related->getId();
+		}
 	}
 }

@@ -11,33 +11,10 @@ namespace Phlex\RedFox;
 use Phlex\Database\Access;
 use Phlex\ResourceManager;
 
+
 abstract class EntityRepository {
 
-	protected $database;
-	protected $table;
-
-	/**
-	 * @var Access
-	 */
-	private $DBAccess = null;
-
-	/**
-	 * @return \Phlex\Database\Access
-	 */
-	function getDBAccess(){
-		if($this->DBAccess == null) $this->DBAccess = ResourceManager::db($this->database);
-		return $this->DBAccess;
-	}
-
-
-	/**
-	 * @param $data
-	 *
-	 * @return Entity
-	 */
-	abstract protected function createInstance($data);
-
-
+#region instance
 	protected static $__instance;
 
 	/**
@@ -47,13 +24,47 @@ abstract class EntityRepository {
 		if (static::$__instance === null) static::$__instance = new static();
 		return static::$__instance;
 	}
+#endregion	
+
+	/** @var string */
+	protected $database;
+	/** @var string */
+	protected $table;
+	/** @var Access */
+	private $DBAccess = null;
+	/** @var array */
+	private $cache = array();
+
+#region abstract methods
 
 	/**
-	 * @param $id
-	 *
+	 * @param array $data
+	 * @return Entity
+	 */
+	abstract protected function createInstance($data);
+
+	/**
+	 * @param Entity $object
+	 * @return bool
+	 */
+	abstract public function checkInstance($object);
+#endregion	
+
+	/**
+	 * @return \Phlex\Database\Access
+	 */
+	function getDBAccess() {
+		if ($this->DBAccess == null) $this->DBAccess = ResourceManager::db($this->database);
+		return $this->DBAccess;
+	}
+
+	/**
+	 * @param int $id
 	 * @return Entity
 	 */
 	public function get($id) {
-		return $this->createInstance( $this->getDBAccess()->getRowById($this->table, $id) );
+		if (array_key_exists($id, $this->cache)) return $this->cache[$id];
+		$this->cache[$id] = $this->createInstance($this->getDBAccess()->getRowById($this->table, $id));
+		return $this->cache[$id];
 	}
 }

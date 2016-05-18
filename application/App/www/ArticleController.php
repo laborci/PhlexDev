@@ -2,7 +2,8 @@
 
 use Entity\Article;
 use Entity\Base\ArticleModel;
-use Entity\Base\ArticleRepository;
+use Entity\ArticleRepository;
+use Phlex\Debug;
 use Phlex\Kraft\Response\HtmlView;
 
 class ArticleController extends LayoutController {
@@ -23,6 +24,7 @@ class ArticleController extends LayoutController {
 		print_r($firstArticle);
 		//print_r($firstArticle->author->title);
 
+		Debug::message($firstArticle);
 
 		//var_dump(property_exists($articleModel, 'title'));
 		//var_dump($articleModel->data);

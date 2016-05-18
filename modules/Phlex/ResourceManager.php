@@ -10,7 +10,11 @@ use Phlex\Database\Access;
 class ResourceManager {
 
 	static protected $databaseConnections = array();
-	
+
+	/**
+	 * @param $name
+	 * @return Access
+	 */
 	static function db($name){
 		if(array_key_exists($name, static::$databaseConnections) === false){
 			$env = Env\Environment::instance();
