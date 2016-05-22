@@ -1,0 +1,40 @@
+{
+	"entity": "User",
+	"write": true,
+	"database": "app",
+	"table": "user",
+	"type": "table",
+	"fields": {
+		"id": {
+			"db": {
+				"null": false,
+				"datatype": "int",
+				"type": "integer",
+				"min": 0,
+				"max": 4294967295,
+				"signed": false
+			},
+			"write": false
+		},
+		"name": {
+			"db": {
+				"null": true,
+				"datatype": "varchar",
+				"type": "string",
+				"maxLength": "255"
+			},
+			"write": true,
+			"serialization": null
+		},
+		"email": {
+			"db": {
+				"null": true,
+				"datatype": "varchar",
+				"type": "string",
+				"maxLength": "255"
+			},
+			"write": true,
+			"serialization": null
+		}
+	}
+}
