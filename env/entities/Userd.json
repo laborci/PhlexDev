@@ -1,0 +1,8 @@
+{
+	"entity": "Userd",
+	"write": true,
+	"database": "app",
+	"table": "userd",
+	"type": "table",
+	"fields": []
+}

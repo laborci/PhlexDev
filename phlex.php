@@ -55,9 +55,9 @@ class RedFoxGenerateCommand extends Command {
 
 
 $application = new Application();
-$application->add(new \Phlex\CliCommand\ConfigCommand());
-$application->add(new \Phlex\CliCommand\BuildCommand());
-$application->add(new \Phlex\CliCommand\RedFoxAddCommand());
-$application->add(new RedFoxRefreshCommand());
-$application->add(new RedFoxGenerateCommand());
+$application->add(new \Phlex\CliCommand\Config\Build());
+$application->add(new \Phlex\CliCommand\Kraft\Build());
+$application->add(new \Phlex\CliCommand\RedFox\Add());
+//$application->add(new RedFoxRefreshCommand());
+//$application->add(new RedFoxGenerateCommand());
 $application->run();

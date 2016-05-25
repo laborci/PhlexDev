@@ -16,16 +16,12 @@ class Add extends Command {
 			->addArgument('database', InputArgument::REQUIRED, 'Name of database')
 			->addArgument('table', InputArgument::REQUIRED, 'Name of data table')
 			->addArgument('entity', InputArgument::OPTIONAL, 'Name of entity')
-			->setDescription('Builds configuration files');
+			->setDescription('Creates a new entity json descriptor based on mysql table or view');
 	}
 
 	protected function execute(InputInterface $input, OutputInterface $output) {
 		$generator = new Generator();
 		$generator->add($input->getArgument('database'), $input->getArgument('table'), $input->getArgument('entity'));
-		$output->writeln('Kinda Done...');
-		//$builder = new \Phlex\Env\ConfigBuilder(__DIR__.'/env/config/', __DIR__.'/.conf/', $output);
-		//$server = $input->getArgument('server');
-		//$builder->build($server);
-		//$output->writeln('Done...');
+		$output->writeln('Done...');
 	}
 }

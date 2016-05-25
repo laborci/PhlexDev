@@ -1,4 +1,4 @@
-<?php namespace Phlex\CliCommand;
+<?php namespace Phlex\CliCommand\Config;
 
 
 use Phlex\Env\ConfigBuilder;
@@ -8,7 +8,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
 
 
-class ConfigCommand extends Command {
+class Build extends Command {
 
 	protected function configure() {
 		$this

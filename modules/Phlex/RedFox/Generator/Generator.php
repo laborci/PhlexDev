@@ -39,8 +39,9 @@ class Generator {
 
 		print_r($tableInfo);
 
-		file_put_contents(getenv('root') . '/env/entities/' . $entity . '.json',
-		                  preg_replace('/^    |\G    /m', "\t", json_encode($tableInfo, JSON_PRETTY_PRINT + JSON_UNESCAPED_SLASHES))
+		file_put_contents(
+			getenv('root') . '/env/entities/' . $entity . '.json',
+			preg_replace('/^    |\G    /m', "\t", json_encode($tableInfo, JSON_PRETTY_PRINT + JSON_UNESCAPED_SLASHES))
 		);
 
 	}
