@@ -1,4 +1,4 @@
-<?php namespace Phlex\CliCommand;
+<?php namespace Phlex\CliCommand\RedFox;
 
 
 use Phlex\RedFox\Generator\Generator;
@@ -8,7 +8,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
 
 
-class RedFoxAddCommand extends Command {
+class Add extends Command {
 
 	protected function configure() {
 		$this

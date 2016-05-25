@@ -1,4 +1,4 @@
-<?php namespace Phlex\CliCommand;
+<?php namespace Phlex\CliCommand\Kraft;
 
 
 use Phlex\Kraft\Parser\TemplateHandler;
@@ -8,11 +8,11 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 
-class BuildCommand extends Command {
+class Build extends Command {
 
 	protected function configure() {
 		$this
-			->setName('build')
+			->setName('kraft:build')
 			->addArgument('force')
 			->setDescription('Builds kraft template files')
 			->addOption(

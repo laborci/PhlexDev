@@ -12,7 +12,7 @@ class ConfigCommand extends Command {
 
 	protected function configure() {
 		$this
-			->setName('config')
+			->setName('config:build')
 			->addArgument('server', InputArgument::REQUIRED, 'Name of server')
 			->setDescription('Builds configuration files');
 	}
