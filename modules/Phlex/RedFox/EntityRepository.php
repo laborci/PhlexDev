@@ -67,4 +67,8 @@ abstract class EntityRepository {
 		$this->cache[$id] = $this->createInstance($this->getDBAccess()->getRowById($this->table, $id));
 		return $this->cache[$id];
 	}
+	
+	public function save($object){
+		
+	}
 }

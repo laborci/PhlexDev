@@ -12,5 +12,4 @@ abstract class Model {
 		if(static::$__instance === null) static::$__instance = new static();
 		return static::$__instance;
 	}
-
 }
