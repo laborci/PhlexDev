@@ -58,6 +58,7 @@ $application = new Application();
 $application->add(new \Phlex\CliCommand\Config\Build());
 $application->add(new \Phlex\CliCommand\Kraft\Build());
 $application->add(new \Phlex\CliCommand\RedFox\Add());
+$application->add(new \Phlex\CliCommand\Test());
 //$application->add(new RedFoxRefreshCommand());
 //$application->add(new RedFoxGenerateCommand());
 $application->run();

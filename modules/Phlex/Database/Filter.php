@@ -1,129 +1,131 @@
 <?php namespace Phlex\Database;
 
+
+/**
+ * @method Filter and ($sql, $sqlParams = null)
+ * @method Filter or ($sql, $sqlParams = null)
+ */
+
 class Filter {
-	
-	private $where = Array();
+
+	protected function __construct() { }
+
+	protected $where = Array();
 
 	/**
 	 * @param string $sql
-	 * @param mixed $sqlParams
-	 *
-*@return Filter
+	 * @param mixed  $sqlParams
+	 * @return Filter
 	 */
-	static function Filter($sql, $sqlParams = null) {
+	static function filter($sql, $sqlParams = null) {
 		$filter = new Filter();
-		return call_user_func_array(array($filter, 'Where'), func_get_args());
+		return $filter->addWhere('WHERE', func_get_args());
 	}
-	
+
 	/**
-	 * @param bool $cond
+	 * @param bool   $cond
 	 * @param string $sql
-	 * @param mixed $sqlParams
-	 *
-*@return Filter
+	 * @param mixed  $sqlParams
+	 * @return Filter
 	 */
-	static function FilterIf($cond, $sql, $sqlParams = null) {
+	static function filterIf($cond, $sql, $sqlParams = null) {
 		$filter = new Filter();
-		call_user_func_array(array($filter, 'WhereIf'), func_get_args());
-		return $filter;
-	}
-	
-	// WHERE
-	/**
-	 * @param string $type
-	 * @param array $args
-	 * @return $this
-	 */
-	protected function addWhere($type, $args){
-		$sql = array_shift($args);
-		if (!$this->where) $type = 'WHERE';
-		else if ($type == 'WHERE') $type = 'AND';
-		$this->where[] = static::createFilterSegment($type, $sql, $args);
-		return $this;
-	}
-	
-	protected static function createFilterSegment($type, $sql, $args) {
-		return array('type' => $type, 'sql' => $sql, 'args' => $args);
+		if (!$cond) return $filter;
+		$args = func_get_args();
+		array_shift($args);
+		return $filter->addWhere('WHERE', $args);
 	}
 
 	/**
-	 * @param string $sql
-	 * @param mixed $sqlParams
-	 * @return $this
+	 * This method handles the or/and calls (these names are reserved keywords)
+	 * @param $name
+	 * @param $args
+	 * @return $this|\Phlex\Database\Filter
 	 */
-	function Where($sql, $sqlParams = null){ return $this->addWhere('WHERE', func_get_args()); }
-	
-	/**
-	 * @param bool $cond
-	 * @param string $sql
-	 * @param mixed $sqlParams
-	 * @return $this
-	 */
-	function WhereIf($cond, $sql, $sqlParams=null){
-		$args = func_get_args(); array_shift($args);
-		if($cond){
-			$this->addWhere('WHERE', $args);
-		}
-		return $this;
-	}
-
-	function __call($name, $args){
+	function __call($name, $args) {
 		$name = strtoupper($name);
-		if($name == 'AND' or $name == 'OR') return $this->addWhere($name, $args);
+		if ($name == 'AND' || $name == 'OR') return $this->addWhere($name, $args);
 		else return $this;
-	} // OR/AND
-
-	/**
-	 * @param bool $cond
-	 * @param string $sql
-	 * @param mixed $sqlParams
-	 * @return $this
-	 */
-	function AndIf($cond, $sql, $sqlParams=null){
-		$args = func_get_args(); array_shift($args);
-		if($cond) $this->addWhere('AND', $args);
-		return $this;
+		//TODO: On else it should fail
 	}
 
 	/**
-	 * @param bool $cond
+	 * @param bool   $cond
 	 * @param string $sql
-	 * @param mixed $sqlParams
+	 * @param mixed  $sqlParams
 	 * @return $this
 	 */
-	function OrIf($cond, $sql, $sqlParams=null){
-		$args = func_get_args(); array_shift($args);
-		if($cond) $this->addWhere('OR', $args);
-		return $this;
+	function andIf($cond, $sql, $sqlParams = null) {
+		if (!$cond) return $this;
+		$args = func_get_args();
+		array_shift($args);
+		return $this->addWhere('AND', $args);
 	}
 
 	/**
+	 * @param bool   $cond
+	 * @param string $sql
+	 * @param mixed  $sqlParams
+	 * @return $this
+	 */
+	function orIf($cond, $sql, $sqlParams = null) {
+		if (!$cond) return $this;
+		$args = func_get_args();
+		array_shift($args);
+		return $this->addWhere('OR', $args);
+	}
+
+	/**
+	 * @param \Phlex\Database\Access $db
 	 * @return string
 	 */
-	function GetSql(Access $db) {
+	public function getSql(Access $db) {
 		if (!$this->where) return null;
-		
+
 		$sql = '';
 		foreach ($this->where as $filterSegment) {
-			if ($filterSegment['sql'] instanceof Filter) $filterSegment['sql'] = $filterSegment['sql']->GetSql($db);
-			else if (is_array($filterSegment['sql'])) $filterSegment['sql'] = static::getSqlFromArray($filterSegment['sql'], $db);
-			
+
+			if ($filterSegment['sql'] instanceof Filter) $filterSegment['sql'] = $filterSegment['sql']->getSql($db);
+			else if (is_array($filterSegment['sql'])) $filterSegment['sql'] = $this->getSqlFromArray($filterSegment['sql'], $db);
 			if (trim($filterSegment['sql'])) {
-				if ($sql) $sql .= " ".$filterSegment['type']." ";
-				$sql .= "(".$db->buildSQL($filterSegment['sql'], $filterSegment['args']).")";
+				if ($sql) $sql .= " " . $filterSegment['type'] . " ";
+				$sql .= "(" . $db->buildSQL($filterSegment['sql'], $filterSegment['args']) . ")";
 			}
+
 		}
 		return $sql;
 	}
-	
-	static function getSqlFromArray(array $filter, Access $db) {
+
+#region Helper methods
+
+	/**
+	 * @param array                  $filter
+	 * @param \Phlex\Database\Access $db
+	 * @return null
+	 */
+	protected function getSqlFromArray(array $filter, Access $db) {
 		if (!$filter) return null;
 		$sql = array();
 		foreach ($filter as $key => $value) {
-			if (is_array($value)) $sql[] = $db->buildSQL(" `".$key."` IN ($1) ", $value);
-			else $sql[] = $db->buildSQL(" `".$key."` = $1 ", $value);
+			if (is_array($value)) $sql[] = $db->buildSQL(" `" . $key . "` IN ($1) ", $value);
+			else $sql[] = $db->buildSQL(" `" . $key . "` = $1 ", $value);
 		}
 		return implode(' AND ', $sql);
 	}
+
+	/**
+	 * @param string $type
+	 * @param array  $args
+	 * @return $this
+	 */
+	protected function addWhere($type, $args) {
+		$sql = array_shift($args);
+		if (!$this->where) $type = 'WHERE';
+		else if ($type == 'WHERE') $type = 'AND';
+		$this->where[] = array('type' => $type, 'sql' => $sql, 'args' => $args);
+		return $this;
+	}
+	#endregion
+
 
 } // End of class

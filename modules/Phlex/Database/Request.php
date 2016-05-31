@@ -6,97 +6,134 @@
  * @method Request Or(string $sql, null $sqlParams)
  */
 class Request{
-	private $where = Array();
-	private $select;
+
+	/** @var \Phlex\Database\Access  */
 	private $db;
+	/** @var string  */
+	private $select = '*';
+	/** @var  string */
+	private $from;
+	/** @var  Filter */
+	private $where;
+	/** @var array  */
 	private $order = Array();
-	protected $converterDelegate;
 
-	function __construct(Access $db, $converterDelegate = null) {
+
+	//private $where = Array();
+	//private $order = Array();
+
+	public function __construct(Access $db) {
 		$this->db = $db;
-		$this->converterDelegate = $converterDelegate;
-	}
-
-	function __invoke($sql, $sqlParams = null) {
-		return call_user_func_array(array($this, 'Select'), func_get_args());
 	}
 
 	/**
-	 * @param $sql
+	 * @param string $sql list of fields to retrieve
+	 * @param string $sqlParams
 	 * @return $this
-	 * @throws Exception
 	 */
-	function Select($sql, $sqlParams = null){
-		if($this->select) trigger_error('Phlex Database Request too many selects', E_USER_ERROR);
+	public function select($sql, $sqlParams){
 		$args = func_get_args(); array_shift($args);
-		$this->select = $this->db->buildSQL('SELECT '.$sql.' ', $args);
-		return $this;
-	}
-
-	// WHERE
-	/**
-	 * @param $type
-	 * @param $args
-	 * @return $this
-	 */
-	function addWhere($type, $args){
-		$sql = array_shift($args);
-		if ($sql instanceof Filter) $sql = $sql->GetSql($this->db);
-		else $sql = $this->db->buildSQL($sql, $args);
-		if (!$this->where) $type = 'WHERE';
-		else if ($type == 'WHERE') $type = 'AND';
-		if ($sql) $this->where[] = ' '.$type.' ('.$sql.') ';
+		$this->select = $this->db->buildSQL($sql.' ', $args);
 		return $this;
 	}
 
 	/**
-	 * @param $sql
-	 * @param null $sqlParams
+	 * @param string $sql mostly the table name
+	 * @param string $sqlParams
 	 * @return $this
 	 */
-	function Where($sql, $sqlParams = null){return $this->addWhere('WHERE', func_get_args());}
-	
-	/**
-	 * @param $cond
-	 * @param $sql
-	 * @param null $sqlParams
-	 * @return $this
-	 */
-	function WhereIf($cond, $sql, $sqlParams=null){
+	public function from($sql, $sqlParams){
 		$args = func_get_args(); array_shift($args);
-		if($cond) $this->addWhere('WHERE', $args);
-		return $this;
-	}
-
-	function __call($name, $args){
-		$name = strtoupper($name);
-		if($name == 'AND' or $name == 'OR') return $this->addWhere($name, $args);
-		else return $this;
-	} // OR/AND
-
-	/**
-	 * @param $cond
-	 * @param $sql
-	 * @param null $sqlParams
-	 * @return $this
-	 */
-	function AndIf($cond, $sql, $sqlParams=null){
-		$args = func_get_args(); array_shift($args);
-		if($cond) $this->addWhere('AND', $args);
+		$this->from = $this->db->buildSQL($sql.' ', $args);
 		return $this;
 	}
 
 	/**
-	 * @param $cond
-	 * @param $sql
-	 * @param null $sqlParams
+	 * @param \Phlex\Database\Filter $filter
 	 * @return $this
 	 */
-	function OrIf($cond, $sql, $sqlParams=null){
-		$args = func_get_args(); array_shift($args);
-		if($cond) $this->addWhere('OR', $args);
+	public function where(Filter $filter){
+		$this->where = $filter;
 		return $this;
 	}
+
+	//
+	///**
+	// * @param $sql
+	// * @return $this
+	// * @throws Exception
+	// */
+	//function Select($sql, $sqlParams = null){
+	//	if($this->select) trigger_error('Phlex Database Request too many selects', E_USER_ERROR);
+	//	$args = func_get_args(); array_shift($args);
+	//	$this->select = $this->db->buildSQL('SELECT '.$sql.' ', $args);
+	//	return $this;
+	//}
+	//
+	//// WHERE
+	///**
+	// * @param $type
+	// * @param $args
+	// * @return $this
+	// */
+	//function addWhere($type, $args){
+	//	$sql = array_shift($args);
+	//	if ($sql instanceof Filter) $sql = $sql->GetSql($this->db);
+	//	else $sql = $this->db->buildSQL($sql, $args);
+	//	if (!$this->where) $type = 'WHERE';
+	//	else if ($type == 'WHERE') $type = 'AND';
+	//	if ($sql) $this->where[] = ' '.$type.' ('.$sql.') ';
+	//	return $this;
+	//}
+	//
+	///**
+	// * @param $sql
+	// * @param null $sqlParams
+	// * @return $this
+	// */
+	//function Where($sql, $sqlParams = null){return $this->addWhere('WHERE', func_get_args());}
+	//
+	///**
+	// * @param $cond
+	// * @param $sql
+	// * @param null $sqlParams
+	// * @return $this
+	// */
+	//function WhereIf($cond, $sql, $sqlParams=null){
+	//	$args = func_get_args(); array_shift($args);
+	//	if($cond) $this->addWhere('WHERE', $args);
+	//	return $this;
+	//}
+	//
+	//function __call($name, $args){
+	//	$name = strtoupper($name);
+	//	if($name == 'AND' or $name == 'OR') return $this->addWhere($name, $args);
+	//	else return $this;
+	//} // OR/AND
+	//
+	///**
+	// * @param $cond
+	// * @param $sql
+	// * @param null $sqlParams
+	// * @return $this
+	// */
+	//function AndIf($cond, $sql, $sqlParams=null){
+	//	$args = func_get_args(); array_shift($args);
+	//	if($cond) $this->addWhere('AND', $args);
+	//	return $this;
+	//}
+	//
+	///**
+	// * @param $cond
+	// * @param $sql
+	// * @param null $sqlParams
+	// * @return $this
+	// */
+	//function OrIf($cond, $sql, $sqlParams=null){
+	//	$args = func_get_args(); array_shift($args);
+	//	if($cond) $this->addWhere('OR', $args);
+	//	return $this;
+	//}
 
 	// ORDER
 	/**
@@ -172,10 +209,6 @@ class Request{
 	 */
 	function GetAll($limit = null, $offset = 0){
 		$data = $this->GetData($limit, $offset);
-		if ($this->converterDelegate && method_exists($this->converterDelegate, 'convertAll')) {
-			$converterDelegate = $this->converterDelegate;
-			return $converterDelegate::convertAll($data);
-		}
 		return $data;
 	}
 
@@ -186,10 +219,6 @@ class Request{
 		$data = $this->GetData(1, 0);
 		if ($data) {
 			$data = array_shift($data);
-			if ($this->converterDelegate && method_exists($this->converterDelegate, 'convertAll')) {
-				$converterDelegate = $this->converterDelegate;
-				return $converterDelegate::convert($data);
-			}
 			return $data;
 		} else return null;
 	}
@@ -223,10 +252,6 @@ class Request{
 	 */
 	function GetPaged($pageSize, $page, &$count){
 		$data = $this->GetPagedData($pageSize, $page, $count);
-		if ($this->converterDelegate && method_exists($this->converterDelegate, 'convertAll')) {
-			$converterDelegate = $this->converterDelegate;
-			return $converterDelegate::convertAll($data);
-		}
 		return $data;
 	}
 
@@ -253,7 +278,7 @@ class Request{
 	 */
 	function GetSql(){
 		return
-			$this->select.' '.
+			'SELECT '.$this->select.' '.
 			join('', $this->where).' '.
 			((count($this->order))?(' ORDER BY '.join(', ',$this->order)):(''));
 	}

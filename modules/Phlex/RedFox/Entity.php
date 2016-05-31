@@ -8,45 +8,70 @@ use Phlex\RedFox\Model\Model;
 
 abstract class Entity {
 
+	/** @var EntityRepository */
+	protected $_repository;
+	
 	/** @var integer */
 	protected $id = null;
 
-	/**
-	 * @return Model
-	 */
-	public function model() { return null; }
+#region abstract methods
+	
+	/** @return Model */
+	abstract public function getModel();
+
+	#endregion
+	
+	public function __construct(EntityRepository $repository) {
+		$this->_repository = $repository;
+	}
+
+	public function __toString() { return $this->id; }
+
+#region data transfer
 
 	/**
-	 * @return int
-	 */
-	public function getId() { return $this->id; }
-
-	/**
+	 * Fills a blank object with data. Should not be used!
 	 * @param array $data
 	 * @return static
 	 */
-	public static function instantiate($data) {
-		$instance = new static();
-		$model = $instance->model();
+	public function _dataIn($data) {
+		$model = $this->getModel();
 
 		foreach ($data as $key => $value) {
 			if (property_exists($model, $key) && $model->$key instanceof Field) {
 				if ($model->$key instanceof Converter) {
-					$instance->$key = $model->$key->convertRead($value);
+					$this->$key = $model->$key->convertRead($value);
 				} else {
-					$instance->$key = $value;
+					$this->$key = $value;
 				}
 			}
 		}
-		return $instance;
 	}
 
-	public static function store() {
+	/**
+	 * Colects the object data to an array. Should not be used!
+	 * @return array
+	 */
+	public function _dataOut() {
+		$model = $this->getModel();
 		$data = array();
-
 		return $data;
 	}
 
+	#endregion
+
+#region getters / setters
+
+	/** @param \Phlex\RedFox\EntityRepository $repository */
+	public function setRepository(EntityRepository $repository){ $this->_repository = $repository; }
+
+	/** @return \Phlex\RedFox\EntityRepository */
+	public function getRepository(){	return $this->_repository; }
+
+	/** @return int */
+	public function getId() { return $this->id; }
+
+	// Common getters
 	public function __get($propertyName) {
 
 		if (method_exists($this, '__get' . ucfirst($propertyName))) {
@@ -54,7 +79,7 @@ abstract class Entity {
 			return $this->$methodName();
 		}
 
-		$model = $this->model();
+		$model = $this->getModel();
 		if (property_exists($model, $propertyName)) {
 			$property = $model->$propertyName;
 			if ($propertyName instanceof Relation) {
@@ -69,13 +94,14 @@ abstract class Entity {
 		return null;
 	}
 
+	// Common setter
 	public function __set($propertyName, $value) {
 		if (method_exists($this, '__set' . ucfirst($propertyName))) {
 			$methodName = '__set' . ucfirst($propertyName);
 			$this->$methodName($value);
 			return;
 		}
-		$model = $this->model();
+		$model = $this->getModel();
 		if (property_exists($model, $propertyName)) {
 			$property = $model->$propertyName;
 			if ($propertyName instanceof Relation) {
@@ -96,4 +122,6 @@ abstract class Entity {
 			}
 		}
 	}
+
+	#endregion
 }

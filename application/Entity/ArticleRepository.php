@@ -1,6 +1,6 @@
 <?php namespace Entity;
 
-use \Entity\Base\ArticleRepositoryBase;
+use \EntityBase\ArticleRepositoryBase;
 
 class ArticleRepository extends ArticleRepositoryBase{
 
