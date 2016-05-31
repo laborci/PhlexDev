@@ -1,12 +1,13 @@
 <?php namespace Phlex\RedFox;
 
 
+use Phlex\Database\DBRequestConverter;
 use Phlex\RedFox\Model\Converter;
 use Phlex\RedFox\Model\Field;
 use Phlex\RedFox\Model\Model;
 
 
-abstract class Entity {
+abstract class Entity{
 
 	/** @var EntityRepository */
 	protected $_repository;

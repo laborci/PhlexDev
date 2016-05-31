@@ -17,14 +17,13 @@ spl_autoload_register( function($class){
 });
 
 spl_autoload_register( function($class){
-	if(substr($class, 0, 7) == 'Entity\\'){
+	if(substr($class, 0, 11) == 'EntityBase\\'){
+		$class = substr($class, 11);
+		$file = dirname( __FILE__ ).'/EntityBase/'.str_replace('\\', '/', $class) . '.php';
+		if(file_exists($file)) require_once $file;
+	}elseif(substr($class, 0, 7) == 'Entity\\'){
 		$class = substr($class, 7);
 		$file = dirname( __FILE__ ).'/Entity/'.str_replace('\\', '/', $class) . '.php';
-		if(file_exists($file)) require_once $file;
-	}
-	if(substr($class, 0, 7) == 'EntityBase\\'){
-		$class = substr($class, 7);
-		$file = dirname( __FILE__ ).'/EntityBase/'.str_replace('\\', '/', $class) . '.php';
 		if(file_exists($file)) require_once $file;
 	}
 });

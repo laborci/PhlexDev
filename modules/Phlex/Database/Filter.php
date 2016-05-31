@@ -1,6 +1,5 @@
 <?php namespace Phlex\Database;
 
-
 /**
  * @method Filter and ($sql, $sqlParams = null)
  * @method Filter or ($sql, $sqlParams = null)
@@ -18,7 +17,7 @@ class Filter {
 	 * @return Filter
 	 */
 	static function filter($sql, $sqlParams = null) {
-		$filter = new Filter();
+		$filter = new static();
 		return $filter->addWhere('WHERE', func_get_args());
 	}
 
@@ -29,7 +28,7 @@ class Filter {
 	 * @return Filter
 	 */
 	static function filterIf($cond, $sql, $sqlParams = null) {
-		$filter = new Filter();
+		$filter = new static();
 		if (!$cond) return $filter;
 		$args = func_get_args();
 		array_shift($args);

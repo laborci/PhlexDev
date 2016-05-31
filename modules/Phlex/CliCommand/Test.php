@@ -1,6 +1,7 @@
 <?php namespace Phlex\CliCommand;
 
 
+use Entity\ArticleRepository;
 use Phlex\Database\Filter;
 use Phlex\RedFox\Generator\Generator;
 use Phlex\ResourceManager;
@@ -21,5 +22,8 @@ class Test extends Command {
 		$filter = Filter::filter("a = $1", 12)->or('a=$1',1)->and(Filter::filter('c=1')->or('b=1'));
 		$filter->and('z = 1');
 		echo $filter->getSql(ResourceManager::db('app'));
+
+		$request = ArticleRepository::instance()->find(Filter::filter('title = $1', 'frankó'))->Desc('publishDate');
+		echo $request->GetSql();
 	}
 }

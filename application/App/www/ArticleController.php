@@ -1,7 +1,6 @@
 <?php namespace App\www;
 
 use Entity\Article;
-use Entity\Base\ArticleModel;
 use Entity\ArticleRepository;
 use Phlex\Debug;
 use Phlex\Kraft\Response\HtmlView;
@@ -14,12 +13,14 @@ class ArticleController extends LayoutController {
 		$view['content'] = $this->getArticleContent($this->request->get->getParsedAsInt('id'));
 		$view['someSet'] = array('key1' => 'value1', 'key2' => 'value2');
 
-		$articleModel = ArticleModel::instance();
 
 
-		$article = new Article();
 
 		$firstArticle = ArticleRepository::instance()->get(1);
+
+		ArticleRepository::instance()->getSome();
+
+
 		echo '<pre>';
 		print_r($firstArticle);
 		//print_r($firstArticle->author->title);

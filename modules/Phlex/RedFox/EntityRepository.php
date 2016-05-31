@@ -1,20 +1,14 @@
-<?php
-/**
- * Author: Laborci Gergely
- * Copyright: 365 Media Ltd. (www.365media.hu)
- * Created: 14/05/16 22:23
- */
-
-namespace Phlex\RedFox;
+<?php namespace Phlex\RedFox;
 
 
 use Phlex\Database\Access;
 use Phlex\Database\Filter;
 use Phlex\Database\Request as DBRequest;
+use Phlex\Database\RequestConverter as DBRequestConverter;
 use Phlex\ResourceManager;
 
 
-abstract class EntityRepository {
+abstract class EntityRepository implements DBRequestConverter {
 
 #region instance
 	protected static $__instance;
@@ -33,9 +27,9 @@ abstract class EntityRepository {
 	/** @var string */
 	protected $table;
 	/** @var Access */
-	private $DBAccess = null;
+	protected $DBAccess = null;
 	/** @var array */
-	private $cache = array();
+	protected $cache = array();
 
 #region abstract methods
 
@@ -71,26 +65,32 @@ abstract class EntityRepository {
 
 	/**
 	 * @param                        $valueField
+	 * @param string                 $keyField
 	 * @param \Phlex\Database\Filter $filter
-	 * @param null                   $order
+	 * @param null|string            $order
 	 * @return mixed
 	 */
-	public function getList($valueField, Filter $filter, $order = null){
+	protected function getKeyValueList($valueField, $keyField = 'id', Filter $filter = null, $order = 'ASC') {
 		$request = new DBRequest($this->getDBAccess());
-		if($order === null) $order = array($valueField, 'ASC');
-		$request->Select("`id` as __KEY__, `".$valueField."` as __VALUE__ FROM `".$this->table."`")->Where($filter)->Order($order);
-		return $request->GetAll();
+		if ($order) $order = array($valueField, 'ASC');
+		$valueField = $this->DBAccess->escapeSQLEntity($valueField);
+		$table = $this->DBAccess->escapeSQLEntity($this->table);
+		$keyField = $this->DBAccess->escapeSQLEntity($keyField);
+		$request->select("'.$keyField.' as __KEY__, " . $valueField . " as __VALUE__")->from($table)->where($filter)->orderIf($order, $order);
+		return $request->getAll();
 	}
 
 	/**
 	 * @param \Phlex\Database\Filter|null $filter
 	 * @return \Phlex\Database\Request
 	 */
-	public function find(Filter $filter = null){
-		$request = new DBRequest($this->getDBAccess());
-		$request->from($this->table);
-		if($filter) {
-			$request->filter($filter);
+	protected function find(Filter $filter = null) {
+		$table = $this->DBAccess->escapeSQLEntity($this->table);
+		$request = new DBRequest($this->getDBAccess(), $this);
+		$request->from($table);
+		$request->key('id');
+		if ($filter !== null) {
+			$request->where($filter);
 		}
 		return $request;
 	}
@@ -102,12 +102,12 @@ abstract class EntityRepository {
 	 */
 	public function save(Entity $object) {
 		if ($this->checkInstance($object)) {
-			
+
 			$data = $object->_dataOut();
-			
-			if($object->getId()){
+
+			if ($object->getId()) {
 				//TODO: update
-			}else{
+			} else {
 				//TODO: insert
 				$id = 'new id provided by the database';
 				$object->id = $id;
@@ -121,5 +121,16 @@ abstract class EntityRepository {
 		$item = $this->createNewEntity();
 		$item->_dataIn($data);
 		return $item;
+	}
+
+	public function DBRequestConvert(array $data, $multiple = false) {
+		if (!$multiple) return $this->instantiateEntity(data);
+		else {
+			$objects = array();
+			foreach ($data as $key => $record) {
+				$objects[$key] = $this->instantiateEntity($record);
+			}
+		}
+		return $objects;
 	}
 }
