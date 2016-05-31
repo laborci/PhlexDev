@@ -1,4 +1,4 @@
-<?php namespace Entity\Base;
+<?php namespace EntityBase;
 
 use Entity\Article;
 
@@ -10,7 +10,7 @@ use Phlex\RedFox\Model\Model;
 
 // use Phlex\RedFox\Relation;
 
-class ArticleModel extends Model{
+class ArticleModelBase extends Model{
 	protected static $__instance = null;
 
 	/**
