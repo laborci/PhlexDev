@@ -2,7 +2,7 @@
 
 use Phlex\RedFox\Model\Field;
 
-class IntegerField extends Field{
+class FloatField extends Field{
 	protected $min;
 	protected $max;
 

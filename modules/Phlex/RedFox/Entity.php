@@ -1,47 +1,54 @@
 <?php namespace Phlex\RedFox;
 
-
-use Phlex\Database\DBRequestConverter;
 use Phlex\RedFox\Model\Converter;
 use Phlex\RedFox\Model\Field;
 use Phlex\RedFox\Model\Model;
 
-
-abstract class Entity{
+/**
+ * Class Entity
+ * @package Phlex\RedFox
+ * @property $id integer
+ */
+abstract class Entity {
 
 	/** @var EntityRepository */
-	protected $_repository;
-	
+	public $_repository;
+
 	/** @var integer */
 	protected $id = null;
 
-#region abstract methods
-	
+	public function __construct( EntityRepository $repository ) { $this->_repository = $repository; }
+
 	/** @return Model */
 	abstract public function getModel();
 
-	#endregion
-	
-	public function __construct(EntityRepository $repository) {
-		$this->_repository = $repository;
+	/** @return string */
+	public function __toString() { return (string)$this->id; }
+
+	/** @return static */
+	public function copy() {
+		$clone = new static( $this->_repository );
+		$data = $this->_dataOut();
+		unset($data[ 'id' ]);
+		$clone->_dataIn( $data );
+		return $clone;
 	}
 
-	public function __toString() { return $this->id; }
 
-#region data transfer
+	#region data transfer
 
 	/**
 	 * Fills a blank object with data. Should not be used!
 	 * @param array $data
 	 * @return static
 	 */
-	public function _dataIn($data) {
+	public function _dataIn( $data ) {
 		$model = $this->getModel();
 
-		foreach ($data as $key => $value) {
-			if (property_exists($model, $key) && $model->$key instanceof Field) {
-				if ($model->$key instanceof Converter) {
-					$this->$key = $model->$key->convertRead($value);
+		foreach( $data as $key => $value ) {
+			if( property_exists( $model, $key ) && $model->$key instanceof Field ) {
+				if( $model->$key instanceof Converter ) {
+					$this->$key = $model->$key->convertRead( $value );
 				} else {
 					$this->$key = $value;
 				}
@@ -56,73 +63,52 @@ abstract class Entity{
 	public function _dataOut() {
 		$model = $this->getModel();
 		$data = array();
+
 		return $data;
+		//TODO: implement this method
+	}
+	#endregion
+
+	#region getters / setters
+
+	/** @return integer */
+	protected function getId() { return $this->id; }
+
+	/** @param $id integer */
+	protected function setId( $id ) {
+		if( $this->id == null ) $this->id = $id;
+		else trigger_error( 'Entity ID can not be set', E_USER_WARNING );
 	}
 
 	#endregion
 
-#region getters / setters
-
-	/** @param \Phlex\RedFox\EntityRepository $repository */
-	public function setRepository(EntityRepository $repository){ $this->_repository = $repository; }
-
-	/** @return \Phlex\RedFox\EntityRepository */
-	public function getRepository(){	return $this->_repository; }
-
-	/** @return int */
-	public function getId() { return $this->id; }
-
-	// Common getters
-	public function __get($propertyName) {
-
-		if (method_exists($this, '__get' . ucfirst($propertyName))) {
-			$methodName = '__get' . ucfirst($propertyName);
-			return $this->$methodName();
-		}
-
-		$model = $this->getModel();
-		if (property_exists($model, $propertyName)) {
-			$property = $model->$propertyName;
-			if ($propertyName instanceof Relation) {
-				/** @var $property Relation */
-				return $property->getRelatedObject($this);
-			}
-			if ($model->$propertyName instanceof Field) {
-				/** @var $property Field */
-				if ($property->access & Field::READ) return $this->$propertyName;
-			}
+	public function __get( $propertyName ) {
+		$method = 'get' . ucfirst( $propertyName );
+		if( method_exists( $this, $method ) ) {
+			return $this->$method();
 		}
 		return null;
 	}
 
-	// Common setter
-	public function __set($propertyName, $value) {
-		if (method_exists($this, '__set' . ucfirst($propertyName))) {
-			$methodName = '__set' . ucfirst($propertyName);
-			$this->$methodName($value);
-			return;
+	public function __set( $propertyName, $value ) {
+		$method = 'set' . ucfirst( $propertyName );
+		if( method_exists( $this, $method ) ) {
+			$this->$method( $value );
 		}
-		$model = $this->getModel();
-		if (property_exists($model, $propertyName)) {
-			$property = $model->$propertyName;
-			if ($propertyName instanceof Relation) {
-				/** @var $property Relation */
-				$property->setRelatedObject($this, $value);
-				return;
-			}
-			if ($model->$propertyName instanceof Field) {
-				/** @var $property Field */
-				if ($property->access & Field::WRITE_ONCE) {
-					if ($this->$propertyName == null) $this->$propertyName = $value;
-					return;
-				}
-				if ($property->access & Field::WRITE) {
-					$this->$propertyName = $value;
-					return;
-				}
-			}
+	}
+	public function __unset( $propertyName ) {
+		$method = 'unset' . ucfirst( $propertyName );
+		if( method_exists( $this, $method ) ) {
+			$this->$method();
 		}
 	}
 
-	#endregion
+	public function __isset( $propertyName ) {
+		$method = 'isset' . ucfirst( $propertyName );
+		if( method_exists( $this, $method ) ) {
+			return $this->$method();
+		}
+		else return false;
+	}
+
 }

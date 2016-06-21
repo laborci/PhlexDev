@@ -9,11 +9,19 @@ class DateTimeField extends Field implements Converter{
 		return 0;
 	}
 
+	/**
+	 * @param $value string
+	 * @return \DateTime
+	 */
 	public function convertRead($value) {
-		// TODO: Implement convertRead() method.
+		return \DateTime::createFromFormat('Y-m-d H:i:s', $value);
 	}
 
+	/**
+	 * @param $value \DateTime
+	 * @return string
+	 */
 	public function convertWrite($value) {
-		// TODO: Implement convertWrite() method.
+		return $value->format('Y-m-d H:i:s');
 	}
 }

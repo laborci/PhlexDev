@@ -1,7 +1,0 @@
-{
-	"template": "{{root}}.templates/",
-	"ext": "phtml",
-	"double-start-suffix": "-begin",
-	"double-end-suffix": "-end",
-	"template-source": "{{root}}application/Template/"
-}

@@ -17,7 +17,7 @@ abstract class EntityRepository implements DBRequestConverter {
 	 * @return static
 	 */
 	public static function instance() {
-		if (static::$__instance === null) static::$__instance = new static();
+		if(static::$__instance === null) static::$__instance = new static();
 		return static::$__instance;
 	}
 #endregion	
@@ -48,7 +48,7 @@ abstract class EntityRepository implements DBRequestConverter {
 
 	/**@return \Phlex\Database\Access */
 	function getDBAccess() {
-		if ($this->DBAccess == null) $this->DBAccess = ResourceManager::db($this->database);
+		if($this->DBAccess == null) $this->DBAccess = ResourceManager::db($this->database);
 		return $this->DBAccess;
 	}
 
@@ -58,7 +58,7 @@ abstract class EntityRepository implements DBRequestConverter {
 	 * @return Entity
 	 */
 	public function get($id) {
-		if (array_key_exists($id, $this->cache)) return $this->cache[$id];
+		if(array_key_exists($id, $this->cache)) return $this->cache[$id];
 		$this->cache[$id] = $this->instantiateEntity($this->getDBAccess()->getRowById($this->table, $id));
 		return $this->cache[$id];
 	}
@@ -72,7 +72,7 @@ abstract class EntityRepository implements DBRequestConverter {
 	 */
 	protected function getKeyValueList($valueField, $keyField = 'id', Filter $filter = null, $order = 'ASC') {
 		$request = new DBRequest($this->getDBAccess());
-		if ($order) $order = array($valueField, 'ASC');
+		if($order) $order = array($valueField, 'ASC');
 		$valueField = $this->DBAccess->escapeSQLEntity($valueField);
 		$table = $this->DBAccess->escapeSQLEntity($this->table);
 		$keyField = $this->DBAccess->escapeSQLEntity($keyField);
@@ -89,10 +89,18 @@ abstract class EntityRepository implements DBRequestConverter {
 		$request = new DBRequest($this->getDBAccess(), $this);
 		$request->from($table);
 		$request->key('id');
-		if ($filter !== null) {
+		if($filter !== null) {
 			$request->where($filter);
 		}
 		return $request;
+	}
+
+	/**
+	 * @param null $filter
+	 * @return \Phlex\Database\Request
+	 */
+	protected function __invoke($filter = null) {
+		return $this->find($filter);
 	}
 
 	/**
@@ -101,11 +109,9 @@ abstract class EntityRepository implements DBRequestConverter {
 	 * @return integer
 	 */
 	public function save(Entity $object) {
-		if ($this->checkInstance($object)) {
-
+		if($this->checkInstance($object)) {
 			$data = $object->_dataOut();
-
-			if ($object->getId()) {
+			if($object->id) {
 				//TODO: update
 			} else {
 				//TODO: insert
@@ -124,10 +130,10 @@ abstract class EntityRepository implements DBRequestConverter {
 	}
 
 	public function DBRequestConvert(array $data, $multiple = false) {
-		if (!$multiple) return $this->instantiateEntity(data);
+		if(!$multiple) return $this->instantiateEntity($data);
 		else {
 			$objects = array();
-			foreach ($data as $key => $record) {
+			foreach($data as $key => $record) {
 				$objects[$key] = $this->instantiateEntity($record);
 			}
 		}

@@ -1,8 +1,5 @@
 <?php namespace Phlex\RedFox\Model;
 
-use Phlex\Database\Access;
-use Phlex\ResourceManager;
-
 abstract class Model {
 
 	/**

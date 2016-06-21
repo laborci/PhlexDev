@@ -14,7 +14,6 @@ class Debug {
 		register_shutdown_function("Phlex\\Debug::fatalErrorHandler");
 	}
 
-
 	static function trace() {
 		$trace = debug_backtrace();
 		array_shift($trace);

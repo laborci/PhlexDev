@@ -54,7 +54,7 @@ class HtmlView extends Response{
 		} else {
 			if ($template == null) $template = $this->template;
 			$env = \Phlex\Env\Environment::instance();
-			$file = $env['kraft']['template'] . $template . '.' . $env['kraft']['ext'];
+			$file = getenv('root').$env['kraft']['template-path'] . $template . '.' . $env['kraft']['ext'];
 			if (file_exists($file)) include $file;
 			else trigger_error('Template not found: "' . $file . '""', E_USER_ERROR);
 		}

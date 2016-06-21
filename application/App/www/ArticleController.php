@@ -18,17 +18,12 @@ class ArticleController extends LayoutController {
 
 		$firstArticle = ArticleRepository::instance()->get(1);
 
-		ArticleRepository::instance()->getSome();
+
+		$s = ArticleRepository::instance()->getSome();
 
 
-		echo '<pre>';
-		print_r($firstArticle);
-		//print_r($firstArticle->author->title);
-
-		Debug::message($firstArticle);
-
-		//var_dump(property_exists($articleModel, 'title'));
-		//var_dump($articleModel->data);
+		echo '<pre>AUTHOR';
+		print_r($firstArticle->authorId);
 		echo '</pre>';
 
 		return $view;

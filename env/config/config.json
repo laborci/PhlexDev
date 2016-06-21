@@ -11,5 +11,14 @@
 		"app": null
 	},
 
-	"@kraft": "kraft.do.not.modify.json"
+	"kraft": {
+		"ext": "phtml",
+		"double-start-suffix": "-begin",
+		"double-end-suffix": "-end",
+		"template-source-path": "application/Template/",
+		"template-path": ".templates/"
+	},
+	"redfox":{
+		"base-classes-path": ".entitybase"
+	}
 }

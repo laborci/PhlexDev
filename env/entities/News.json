@@ -1,0 +1,44 @@
+{
+	"?": "Entity News on PhlexDev(app) / article table",
+	"insert": true,
+	"update": true,
+	"delete": true,
+	"fields": {
+		"title": {
+			"?": "varchar(255) as string(255)",
+			"access": "public",
+			"serialization": false,
+			"default": null
+		},
+		"lead": {
+			"?": "text as string(65535)",
+			"access": "public",
+			"serialization": false,
+			"default": "leadtext"
+		},
+		"authorId": {
+			"?": "int(11) unsigned -> phlexdev/user/id as integer(0-4294967295)",
+			"access": "protected",
+			"reference": "User as author",
+			"default": null
+		},
+		"data": {
+			"?": "mediumtext as string(16777215)",
+			"access": "public",
+			"serialization": false,
+			"default": {
+				"key": "value"
+			}
+		},
+		"publishDate": {
+			"?": "datetime as datetime",
+			"access": "public",
+			"default": 12
+		},
+		"type": {
+			"?": "enum('news','article','feature','blogpost') as enum",
+			"access": "public",
+			"default": "news"
+		}
+	}
+}

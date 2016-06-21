@@ -1,0 +1,71 @@
+{
+	"?": "Do not modify this file!",
+	"database-alias": "app",
+	"database": "PhlexDev",
+	"table": "article",
+	"type": "table",
+	"fields": {
+		"id": {
+			"null": false,
+			"datatype": "int",
+			"columntype": "int(11) unsigned",
+			"type": "integer",
+			"min": 0,
+			"max": 4294967295,
+			"signed": false
+		},
+		"title": {
+			"null": true,
+			"datatype": "varchar",
+			"columntype": "varchar(255)",
+			"type": "string",
+			"maxLength": "255"
+		},
+		"lead": {
+			"null": true,
+			"datatype": "text",
+			"columntype": "text",
+			"type": "string",
+			"maxLength": "65535"
+		},
+		"authorId": {
+			"null": true,
+			"datatype": "int",
+			"columntype": "int(11) unsigned",
+			"type": "integer",
+			"min": 0,
+			"max": 4294967295,
+			"signed": false,
+			"reference": {
+				"database": "phlexdev",
+				"table": "user",
+				"field": "id"
+			}
+		},
+		"data": {
+			"null": true,
+			"datatype": "mediumtext",
+			"columntype": "mediumtext",
+			"type": "string",
+			"maxLength": "16777215"
+		},
+		"publishDate": {
+			"null": true,
+			"datatype": "datetime",
+			"columntype": "datetime",
+			"type": "datetime"
+		},
+		"type": {
+			"null": true,
+			"datatype": "enum",
+			"columntype": "enum('news','article','feature','blogpost')",
+			"type": "enum",
+			"options": [
+				"news",
+				"article",
+				"feature",
+				"blogpost"
+			]
+		}
+	}
+}

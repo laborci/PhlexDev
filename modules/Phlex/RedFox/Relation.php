@@ -1,9 +1,5 @@
 <?php
-/**
- * Author: Laborci Gergely
- * Copyright: 365 Media Ltd. (www.365media.hu)
- * Created: 14/05/16 22:45
- */
+//TODO: this class seems unneccessary
 
 namespace Phlex\RedFox;
 
@@ -36,35 +32,12 @@ class Relation {
 
 	/**
 	 * Relation constructor.
+	 * @param $name
 	 * @param $reference  IntegerField
 	 * @param $repository EntityRepository
 	 */
 	function __construct($name, $reference, $repository) {
 		$this->repository = $repository;
 		$this->reference = $reference;
-	}
-
-	/**
-	 * Gets related object
-	 * @param $object
-	 * @return mixed
-	 */
-	function getRelatedObject($object) {
-		$reference = $this->reference->getFieldName();
-		return $this->repository->get($object->$reference);
-	}
-
-	/**
-	 * Sets related object
-	 * @param Entity $object
-	 * @param Entity $related
-	 */
-	function setRelatedObject($object, $related) {
-		if ($this->repository->checkInstance($related)) {
-			$fieldName = $this->name;
-			$reference = $this->reference->getFieldName();
-			$object->$fieldName = $related;
-			$object->$reference = $related->getId();
-		}
 	}
 }

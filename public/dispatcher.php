@@ -10,7 +10,7 @@ $env = \Phlex\Env\Environment::instance();
 
 if($env['dev-mode']){
 	// system('php '.$env['root'].'phlex.php config -q');
-	system('php '.$env['root'].'phlex.php build -q -f');
+	system('php '.$env['root'].'phlex.php kraft:build -q -f');
 	\Phlex\Debug::setup();
 }
 

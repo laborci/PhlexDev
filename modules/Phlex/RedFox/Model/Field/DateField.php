@@ -11,10 +11,10 @@ use Phlex\RedFox\Model\Converter;
 use Phlex\RedFox\Model\Field;
 
 class DateField extends Field implements Converter{
+
 	protected function typevalidator($value){
 		return 0;
 	}
-
 
 	public function convertRead($value) {
 		// TODO: Implement convertRead() method.

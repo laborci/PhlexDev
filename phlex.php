@@ -5,7 +5,7 @@
 require __DIR__.'/vendor/autoload.php';
 require __DIR__.'/modules/autoload.php';
 
-putenv('root='.__DIR__);
+putenv('root='.__DIR__.'/');
 
 error_reporting(E_ALL);
 ini_set('display_errors', true);
@@ -56,9 +56,10 @@ class RedFoxGenerateCommand extends Command {
 
 $application = new Application();
 $application->add(new \Phlex\CliCommand\Config\Build());
+$application->add(new \Phlex\CliCommand\Config\Init());
 $application->add(new \Phlex\CliCommand\Kraft\Build());
 $application->add(new \Phlex\CliCommand\RedFox\Add());
+$application->add(new \Phlex\CliCommand\RedFox\Refresh());
+$application->add(new \Phlex\CliCommand\RedFox\Generate());
 $application->add(new \Phlex\CliCommand\Test());
-//$application->add(new RedFoxRefreshCommand());
-//$application->add(new RedFoxGenerateCommand());
 $application->run();

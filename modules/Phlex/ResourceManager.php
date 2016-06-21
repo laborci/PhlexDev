@@ -21,7 +21,7 @@ class ResourceManager {
 	static function db($name){
 		if(array_key_exists($name, static::$databaseConnections) === false){
 			$env = Env\Environment::instance();
-			if(!array_key_exists($name, $env['databases'])) throw new GeneralException('"'.$name.'" database not found in Environment', GeneralException::RESOURCE_DB_NOT_FOUND);
+			if(!array_key_exists($name, $env['databases'])) trigger_error('"'.$name.'" database not found in Environment', E_USER_ERROR);
 			static::$databaseConnections[$name] = new Access($env['databases'][$name]);
 		} 
 		return static::$databaseConnections[$name];

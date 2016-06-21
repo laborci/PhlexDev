@@ -4,6 +4,11 @@
 	"domain": "phlex6.dev",
 	"root": "/htdocs/{{app}}/",
 	"databases": {
-		"app": "@db:root:awd@127.0.0.1/phlexdev"
+		"app": {
+			"user": "root",
+			"password": "awd",
+			"server": "127.0.0.1",
+			"database": "{{app}}"
+		}
 	}
 }

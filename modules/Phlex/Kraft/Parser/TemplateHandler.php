@@ -17,8 +17,8 @@ class TemplateHandler {
 
 		$env = Environment::instance();
 
-		if($source == null) $source = $env['kraft']['template-source'];
-		if($destination == null) $destination = $env['kraft']['template'];
+		if($source == null) $source = getenv('root').$env['kraft']['template-source-path'];
+		if($destination == null) $destination = getenv('root').$env['kraft']['template-path'];
 		if(!$source or !$destination) return;
 		$source = $source.'/';
 		$destination = $destination.'/';
